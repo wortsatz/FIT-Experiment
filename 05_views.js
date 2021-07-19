@@ -23,7 +23,7 @@ const instructions = magpieViews.view_generator("instructions", {
   title: 'Instructions',
   text: `Before we get started we will provide you with some short instructions and explain what your
   task is going to be.
-  You will be presented an akkumulation of letters in different colors and you are then supposed to
+  You will be presented an accumulation of letters in different colors and you are then supposed to
   find a target among the shown items. The target will be specified before the letters are shown on the screen and
   their description contains information about the required color and shape.
   If you detect the target press the "l"-key on your keyboard and if you cannot find the target press "s" instead.
@@ -40,14 +40,34 @@ const instructions = magpieViews.view_generator("instructions", {
 
 const main_instructions = magpieViews.view_generator("instructions", {
   trials: 1,
-  name: 'instructions',
+  name: 'main_instructions',
+  title: 'Instructions',
+  text: `So far so good!
+  You have now finished the practice phase and hopefully well prepared for the main trials.
+  They are identical in format and content.
+  In order to proceed, press the button below.`,
+  buttonText: 'proceed to main trails'
+});
+
+const color_instructions = magpieViews.view_generator("instructions", {
+  trials: 1,
+  name: 'instructions_feature',
+  title: 'Instructions',
+  text: `The target you are supposed to find is either a blue X or a blue T.
+  In the presence of the target press "L", otherwise press "S".`,
+  buttonText: 'proceed to practice trails'
+});
+
+
+const instructions_conjunction = magpieViews.view_generator("instructions", {
+  trials: 1,
+  name: 'instructions_conjunction',
   title: 'Instructions',
   text: `So far so good!
   Please get ready for the main experiment.
   If you feel ready to start the experiment, please click on the "start the experiment"-button down below.`,
   buttonText: 'start the experiment'
 });
-
 // In the post test questionnaire you can ask your participants addtional questions
 const post_test = magpieViews.view_generator("post_test", {
   trials: 1,
@@ -103,30 +123,62 @@ const thanks = magpieViews.view_generator("thanks", {
 */
 
 // Here, we initialize a keyPress task
-const practice = custom_views.keypress_FIT_practice({
-    trials: 32,
-    // trials: 2,
+const practice_feature = custom_views.keypress_FIT_practice({
+    trials: practice_feature_trails.key_press.length,
     name: 'practice',
     trial_type: 'practice',
     pause: 250,
+    hook.after_pause: get_ready,
     //"get ready!" on white screen
     fix_duration: 1000,
-    data: _.shuffle(practice_trial_info.key_press),
+    data: _.shuffle(practice_feature_trials_info.key_press),
     key1: "s",
     key2: "l",
     s: "incorrect",
     l: "correct",
 });
 
-const main = custom_views.keypress_FIT_main({
-    trials: 128,
-    // trials: 8,
+// Here, we initialize a keyPress task
+const practice_conjunction = custom_views.keypress_FIT_practice({
+    trials: practice_conjunction_trails_info.key_press.length,
+    name: 'practice',
+    trial_type: 'practice',
+    pause: 250,
+    hook.after_pause: get_ready,
+    //"get ready!" on white screen
+    fix_duration: 1000,
+    data: _.shuffle(practice_conjunction_trials_info.key_press),
+    key1: "s",
+    key2: "l",
+    s: "incorrect",
+    l: "correct",
+});
+
+const main_feature = custom_views.keypress_FIT_main({
+    trials: main_feature_trails_info.key_press.length,
     name: 'main',
     trial_type: 'main',
     pause: 250,
+    hook.after_pause: get_ready,
     //"get ready!" on white screen
     fix_duration: 1000,
-    data: _.shuffle(main_trial_info.key_press),
+    data: _.shuffle(main_feature_trials_info.key_press),
+    key1: "s",
+    key2: "l",
+    s: "incorrect",
+    l: "correct",
+});
+
+
+const main_conjunction = custom_views.keypress_FIT_main({
+    trials: main_conjunction_trails_info.key_press.length,
+    name: 'main',
+    trial_type: 'main',
+    pause: 250,
+    hook.after_pause: get_ready,
+    //"get ready!" on white screen
+    fix_duration: 1000,
+    data: _.shuffle(main_conjunction_trials_info.key_press),
     key1: "s",
     key2: "l",
     s: "incorrect",

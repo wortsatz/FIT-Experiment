@@ -64,7 +64,9 @@ check_response = function(data, next) {
 // Declare your hooks here
 
 
-/* Generators for custom view templates, answer container elements and enable response functions
-*
-*
-*/
+// compares the chosen answer to the value of `option1`
+get_ready = function(data, next) {
+    alert('Get ready!');
+    next();
+
+}

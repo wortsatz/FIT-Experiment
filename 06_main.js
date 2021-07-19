@@ -15,22 +15,26 @@ $("document").ready(function() {
     window.magpie_monitor = magpieInit({
         // You have to specify all views you want to use in this experiment and the order of them
         views_seq: [
-            intro,
-            instructions,
-            practice,
-            main_instructions,
-            main,
-            post_test,
-            thanks,
+          intro,
+          instructions,
+          _.shuffle(
+            [(instructions_conjunction, practice_conjunction),
+            (instructions_feature, practice_feature)]
+          ),
+          main_instructions,
+          loopShuffle(main_conjunction, main_conjunction, main_feature], 3),
+          post_test,
+          thanks
         ],
+
         // Here, you can specify all information for the deployment
         deploy: {
-            experimentID: "243",
+            experimentID: "256",
             serverAppURL: "https://magpie-demo.herokuapp.com/api/submit_experiment/",
             // Possible deployment methods are:
             // "debug" and "directLink"
             // As well as "MTurk", "MTurkSandbox" and "Prolific"
-            deployMethod: "directLink",
+            deployMethod: "debug",
             contact_email: "franka.timm00@gmail.com",
             prolificURL: "https://app.prolific.ac/submissions/complete?cc=SAMPLE1234"
         },
