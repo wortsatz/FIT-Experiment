@@ -15,16 +15,16 @@ $("document").ready(function() {
     window.magpie_monitor = magpieInit({
         // You have to specify all views you want to use in this experiment and the order of them
         views_seq: [
-          intro,
-          instructions,
-          _.shuffle(
-            [(instructions_conjunction, practice_conjunction),
-            (instructions_feature, practice_feature)]
-          ),
-          main_instructions,
-          loopShuffle([main_conjunction, main_conjunction, main_feature, main_feature], 3),
-          post_test,
-          thanks
+            intro,
+            instructions,
+            _.shuffle(
+              [(instructions_conjunction, practice_conjunction),
+              (instructions_feature, practice_feature)]
+            ),
+            main_instructions,
+            loopShuffle([main_conjunction, main_conjunction, main_feature, main_feature], 3),
+            post_test,
+            thanks
         ],
 
         // Here, you can specify all information for the deployment
