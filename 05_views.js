@@ -164,7 +164,7 @@ const main_feature = custom_views.keypress_FIT_main({
     //"get ready!" on white screen
     fix_duration: 1000,
     data: _.shuffle(main_feature_trials_info.key_press),
-    loop: (main_feature,2)
+    loop: (main_feature,2),
     key1: "s",
     key2: "l",
     s: "incorrect",
