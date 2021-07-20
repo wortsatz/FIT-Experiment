@@ -8,7 +8,8 @@ const intro = magpieViews.view_generator("intro", {
   <br />
   Thank you for taking your time and contributing to our research.
   You can only take part in this experiment using a computer that is connected to a keyboard.
-  Before we start, please make sure that you do not get distracted by anything (e.g. your phone, internet browser,...).
+  <br />
+  Before we start, please make sure to not get distracted by anything (e.g. your phone, internet browser,...).
   Make yourself comfortable and get yourself mentally into a working space.
   <br />
   <br />
@@ -17,22 +18,23 @@ const intro = magpieViews.view_generator("intro", {
 });
 
 //general instructions
+//need to be changed!!!!
 const instructions = magpieViews.view_generator("instructions", {
   trials: 1,
   name: 'instructions',
   title: 'Instructions',
   text: `Before we get started we will provide you with some short instructions and explain what your
   task is going to be.
-  You will be presented an accumulation of letters in different colors and you are then supposed to
+  <br />
+  You will be presented an accumulation of letters in different colors. You are then supposed to
   find a target among the shown items. The target will be specified before the letters are shown on the screen and
   their description contains information about the required color and shape.
   If you detect the target press the "l"-key on your keyboard and if you cannot find the target press "s" instead.
+  <br />
   During the whole experiment rest your index finger on the corresponding keys.
   Your answers should ensue as fast and accurate as possible.
-
   <br />
   <br />
-
   In order to prepare you for the experimental setup you will first run through some practice trials before you proceed to the main task.
   If you feel ready to start the practice trails, please click on the "start with practice trials"-button down below.`,
   buttonText: 'start with practice trials'
@@ -49,23 +51,23 @@ const main_instructions = magpieViews.view_generator("instructions", {
   buttonText: 'proceed to main trails'
 });
 
-const color_instructions = magpieViews.view_generator("instructions", {
+const instructions_conjunction = magpieViews.view_generator("instructions", {
   trials: 1,
   name: 'instructions_feature',
   title: 'Instructions',
-  text: `The target you are supposed to find is either a blue X or a blue T.
-  In the presence of the target press "L", otherwise press "S".`,
+  text: `The target you are supposed to find is a green T.
+  Again, if you detect the target "green T" press L, otherwise press S.`,
   buttonText: 'proceed to practice trails'
 });
 
 
-const instructions_conjunction = magpieViews.view_generator("instructions", {
+const instructions_feature = magpieViews.view_generator("instructions", {
   trials: 1,
   name: 'instructions_conjunction',
   title: 'Instructions',
-  text: `So far so good!
-  Please get ready for the main experiment.
-  If you feel ready to start the experiment, please click on the "start the experiment"-button down below.`,
+  text: `Now you are asked to search for two targets, each defined by a
+  different single feature: a color (blue) and a shape (S). Hence, the target you are supposed to find is either a blue X, blue T (color) or a brown or green S (shape).
+  In the presence of the target press "L", otherwise press "S".`,
   buttonText: 'start the experiment'
 });
 // In the post test questionnaire you can ask your participants addtional questions
@@ -154,6 +156,20 @@ const practice_conjunction = custom_views.keypress_FIT_practice({
     l: "correct",
 });
 
+const practice_feature = custom_views.keypress_FIT_practice({
+    trials: practice_feature_trails_info.key_press.length,
+    name: 'practice',
+    trial_type: 'practice',
+    pause: 250,
+    hook.after_pause: get_ready,
+    //"get ready!" on white screen
+    fix_duration: 1000,
+    data: _.shuffle(practice_feature_trials_info.key_press),
+    key1: "s",
+    key2: "l",
+    s: "incorrect",
+    l: "correct",
+});
 const main_feature = custom_views.keypress_FIT_main({
     trials: main_feature_trails_info.key_press.length,
     name: 'main',
