@@ -53,9 +53,9 @@ const time_limit = function(data, next) {
 check_response = function(data, next) {
     $('input[name=answer]').on('change', function(e) {
         if (e.target.value === data.correct) {
-            alert('Correct!'+ 'Your reaction time is' + data.RT);
+            alert('Correct!'.concat('You reacted within') .concat (data.RT) .concat('ms.'));
         } else {
-            alert('Incorrect! The correct answer was ' + data.correct + 'Your reaction time is' + data.RT); // data.RT?? not sure
+            alert('Incorrect! The correct answer was ' .concat(data.correct) .concat('You reacted within')  .concat(data.RT) .concat('ms.')); // data.RT?? not sure
         }
         next();
     })
