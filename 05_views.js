@@ -126,22 +126,6 @@ const thanks = magpieViews.view_generator("thanks", {
 */
 
 // Here, we initialize a keyPress task
-const practice_feature = custom_views.keypress_FIT_practice({
-    trials: practice_feature_trails.key_press.length,
-    name: 'practice',
-    trial_type: 'practice',
-    pause: 250,
-    after_pause: get_ready,
-    //"get ready!" on white screen
-    fix_duration: 1000,
-    data: _.shuffle(practice_feature_trials_info.key_press),
-    key1: "s",
-    key2: "l",
-    s: "incorrect",
-    l: "correct",
-});
-
-// Here, we initialize a keyPress task
 const practice_conjunction = custom_views.keypress_FIT_practice({
     trials: practice_conjunction_trails_info.key_press.length,
     name: 'practice',
