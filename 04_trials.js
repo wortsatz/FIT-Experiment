@@ -74,7 +74,7 @@ const practice_feature_trials_info = {
       ],
   };
 
-const practice_conjunction_trails_info = {
+const practice_conjunction_trials_info = {
   key_press: [
     {
         picture: "images/practice/conjunction/1/target/C_1_T_1.jpg",
