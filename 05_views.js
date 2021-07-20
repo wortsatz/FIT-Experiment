@@ -3,7 +3,7 @@
 const intro = magpieViews.view_generator("intro", {
   trials: 1,
   name: 'intro',
-  title: 'Welcome!'
+  title: 'Welcome!',
   text: `Welcome to our experiment!
   <br />
   <br />
