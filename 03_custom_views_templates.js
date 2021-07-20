@@ -14,50 +14,7 @@
 const custom_views = {};
 
 // We can now add view templates to our custom_views object
-const answer_container_generators = {
-  post_test: function(config, CT) {
-        const quest = magpieUtils.view.fill_defaults_post_test(config);
-        return `<form>
-                    <p class='magpie-view-text'>
-                        <label for="age">${quest.age.title}:</label>
-                        <input type="number" name="age" min="18" max="110" id="age" />
-                    </p>
-                    <p class='magpie-view-text'>
-                    <select id="hand" name="hand">
-                        <option></option>
-                        <option value="${quest.hand.right}">${quest.hand.right}</option>
-                        <option value="${quest.hand.left}">${quest.hand.left}</option>
-                    </p>
-                    <p class='magpie-view-text'>
-                        <label for="gender">${quest.gender.title}:</label>
-                        <select id="gender" name="gender">
-                            <option></option>
-                            <option value="${quest.gender.male}">${quest.gender.male}</option>
-                            <option value="${quest.gender.female}">${quest.gender.female}</option>
-                            <option value="${quest.gender.other}">${quest.gender.other}</option>
-                        </select>
-                    </p>
-                    <p class='magpie-view-text'>
-                        <label for="education">${quest.edu.title}:</label>
-                        <select id="education" name="education">
-                            <option></option>
-                            <option value="${quest.edu.graduated_high_school}">${quest.edu.graduated_high_school}</option>
-                            <option value="${quest.edu.graduated_college}">${quest.edu.graduated_college}</option>
-                            <option value="${quest.edu.higher_degree}">${quest.edu.higher_degree}</option>
-                        </select>
-                    </p>
-                    <p class='magpie-view-text'>
-                        <label for="languages" name="languages">${quest.langs.title}:<br /><span>${quest.langs.text}</</span></label>
-                        <input type="text" id="languages"/>
-                    </p>
-                    <p class="magpie-view-text">
-                        <label for="comments">${quest.comments.title}</label>
-                        <textarea name="comments" id="comments" rows="6" cols="40"></textarea>
-                    </p>
-                    <button id="next" class='magpie-view-button'>${config.button}</button>
-            </form>`
-    },
-  };
+
 // Custom view template for practice trials
 custom_views.keypress_FIT_practice = function(config) {
     const keypress_FIT_practice_function = {
