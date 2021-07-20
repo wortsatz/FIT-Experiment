@@ -170,7 +170,7 @@ const main_feature_trials_info = {
              item: 29,
              expected: "positive",
              number_of_item: 1,
-             condition: "color",,
+             condition: "color",
          },
          {
              picture: "images/main/feature/1/target/F_C_1_T_6_XBlue.jpg",
