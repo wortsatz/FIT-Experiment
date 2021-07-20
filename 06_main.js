@@ -21,7 +21,7 @@ $("document").ready(function() {
               [(instructions_conjunction, practice_conjunction),
               (instructions_feature, practice_feature)]),
             main_instructions,
-            loop(_.shuffle([main_conjunction, main_feature], 3)),
+            _.shuffle([main_conjunction, main_feature]),
             post_test,
             thanks
         ],
