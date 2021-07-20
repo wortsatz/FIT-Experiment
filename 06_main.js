@@ -22,7 +22,7 @@ $("document").ready(function() {
               (instructions_feature, practice_feature)]
             ),
             main_instructions,
-            loopShuffle([main_conjunction, main_conjunction, main_feature, main_feature], 3),
+            loopShuffle([loop([main_conjunction],2),loop([main_feature],2)], 3),
             post_test,
             thanks
         ],
