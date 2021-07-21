@@ -68,7 +68,7 @@ const instructions_feature = magpieViews.view_generator("instructions", {
   trials: 1,
   name: 'instructions_feature',
   title: 'Instructions',
-  text: `Now you are asked to search for two targets, each defined by a
+  text: `You are supposed to look for two targets, each defined by a
   different single feature: a color (blue) and a shape (S). Hence, the target you are supposed to find is either a blue X, blue T (color) or a brown or green S (shape).
   In the presence of the target press "L", otherwise press "S".`,
   buttonText: 'proceed to trails'
@@ -77,7 +77,7 @@ const instructions_feature = magpieViews.view_generator("instructions", {
 const after_block = magpieViews.view_generator("instructions", {
   trials: 1,
   name: 'after_block',
-  title: 'Pause',
+  title: 'Take a short break!',
   text: `Good job! You completed one block. If you feel ready to proceed click on the botton below. `,
   buttonText: 'proceed to trials'
 });
