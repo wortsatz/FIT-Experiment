@@ -194,3 +194,9 @@ const main_conjunction = custom_views.keypress_FIT_main({
     s: "negative",
     l: "positive",
 });
+
+const dominant_hand = magpieViews.view_generator("forced_choice", {
+    trials: dominant_hand_info.forced_choice.length,
+    name: 'dominant_hand',
+    data: dominant_hand_info.forced_choice
+});
