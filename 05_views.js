@@ -46,9 +46,9 @@ const main_instructions = magpieViews.view_generator("instructions", {
   name: 'main_instructions',
   title: 'Instructions',
   text: `So far so good!
-  You now finished the practice phase and are hopefully well prepared for the main
-  part of the experiment. The main trials are identical in form and content
-  as the practice trials. In order to proceed, press the button below.`,
+  You have now finished the practice phase and hopefully well prepared for the main trials.
+  They are identical in format and content.
+  In order to proceed, press the button below.`,
   buttonText: 'proceed to main trails'
 });
 
@@ -67,17 +67,16 @@ const instructions_feature = magpieViews.view_generator("instructions", {
   name: 'instructions_conjunction',
   title: 'Instructions',
   text: `Now you are asked to search for two targets, each defined by a
-  different single feature: a color (blue) and a shape (S). Hence, the target you are supposed to find is either a blue X,
-  blue T (color) or a brown or green S (shape).
+  different single feature: a color (blue) and a shape (S). Hence, the target you are supposed to find is either a blue X, blue T (color) or a brown or green S (shape).
   In the presence of the target press "L", otherwise press "S".`,
-  buttonText: 'Start the experiment'
+  buttonText: 'start the experiment'
 });
 // In the post test questionnaire you can ask your participants addtional questions
 const post_test = magpieViews.view_generator("post_test", {
   trials: 1,
   name: 'post_test',
   title: 'Additional information',
-  text: 'Good job! You are almost done with the experiment. The last step is to answer the following questions.'
+  text: ' Good job! You nearly done with the experiment. The last step is to answer the following questions.'
 
   // buttonText: 'continue',
   // dominant_hand: 'dominant hand',
@@ -134,10 +133,9 @@ const practice_conjunction = custom_views.keypress_FIT_practice({
     pause: 250,
     hook: {
       after_pause: get_ready,
-      after_response_enabled: check_response,
     },
     //"get ready!" on white screen
-    fix_duration: 250,
+    fix_duration: 1000,
     data: _.shuffle(practice_conjunction_trials_info.key_press),
     key1: "s",
     key2: "l",
@@ -152,14 +150,13 @@ const practice_feature = custom_views.keypress_FIT_practice({
     pause: 250,
     hook: {
       after_pause: get_ready,
-      after_response_enabled: check_response,
     },
     //"get ready!" on white screen
     fix_duration: 1000,
     data: _.shuffle(practice_feature_trials_info.key_press),
     key1: "s",
     key2: "l",
-    s: "neative",
+    s: "negative",
     l: "positive",
 });
 const main_feature = custom_views.keypress_FIT_main({
@@ -169,7 +166,6 @@ const main_feature = custom_views.keypress_FIT_main({
     pause: 250,
     hook: {
       after_pause: get_ready,
-      after_response_enabled: check_response,
     },
     //"get ready!" on white screen
     fix_duration: 1000,
@@ -188,10 +184,9 @@ const main_conjunction = custom_views.keypress_FIT_main({
     pause: 250,
     hook: {
       after_pause: get_ready,
-      after_response_enabled: check_response,
     },
-    fix_duration: 1000,
     //"get ready!" on white screen
+    fix_duration: 1000,
     data: _.shuffle(main_conjunction_trials_info.key_press),
     key1: "s",
     key2: "l",

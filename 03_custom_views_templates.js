@@ -59,7 +59,7 @@ custom_views.keypress_FIT_practice = function(config) {
                         correctness = "correct";
                         // show feedback
                         $(".magpie-view-stimulus").addClass("magpie-invisible");
-                        $('#feedback').text('Correct!');
+                        $('#feedback').text('Correct! You reacted with in', RT , 'seconds.');
 
                     } else {
                         correctness = "incorrect";
