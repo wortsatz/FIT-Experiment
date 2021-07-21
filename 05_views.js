@@ -38,7 +38,7 @@ const instructions = magpieViews.view_generator("instructions", {
   <br />
   <br />
   In order to prepare you for the experimental setup you will first run through some practice trials before you proceed to the main task.
-  If you feel ready to start the practice trails, please click on the "start with practice trials"-button down below.`,
+  If you feel ready to start the practice trials, please click on the "start with practice trials"-button down below.`,
   buttonText: 'start with practice trials'
 });
 
@@ -53,25 +53,35 @@ const main_instructions = magpieViews.view_generator("instructions", {
   buttonText: 'proceed to main trails'
 });
 
+
 const instructions_conjunction = magpieViews.view_generator("instructions", {
   trials: 1,
-  name: 'instructions_feature',
+  name: 'instructions_conjunction',
   title: 'Instructions',
   text: `The target you are supposed to find is a green T.
   Again, if you detect the target "green T" press L, otherwise press S.`,
-  buttonText: 'proceed to practice trails'
+  buttonText: 'proceed to trials'
 });
 
 
 const instructions_feature = magpieViews.view_generator("instructions", {
   trials: 1,
-  name: 'instructions_conjunction',
+  name: 'instructions_feature',
   title: 'Instructions',
   text: `Now you are asked to search for two targets, each defined by a
   different single feature: a color (blue) and a shape (S). Hence, the target you are supposed to find is either a blue X, blue T (color) or a brown or green S (shape).
   In the presence of the target press "L", otherwise press "S".`,
-  buttonText: 'start the experiment'
+  buttonText: 'proceed to trails'
 });
+
+const after_block = magpieViews.view_generator("instructions", {
+  trials: 1,
+  name: 'after_block',
+  title: 'Pause',
+  text: `Good job! You completed one block. If you feel ready to proceed click on the botton below. `,
+  buttonText: 'proceed to trials'
+});
+
 // In the post test questionnaire you can ask your participants addtional questions
 const post_test = magpieViews.view_generator("post_test", {
   trials: 1,
