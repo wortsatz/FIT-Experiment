@@ -131,6 +131,7 @@ const practice_conjunction = custom_views.keypress_FIT_practice({
     name: 'practice',
     trial_type: 'practice',
     pause: 250,
+    fix_duration: 1000,
     hook: {
       after_pause: get_ready,
     },
