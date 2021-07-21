@@ -138,7 +138,7 @@ const practice_conjunction = custom_views.keypress_FIT_practice({
     //"get ready!" on white screen
     fix_duration: 1000,
     hook: {
-      check_response,
+      after_response_enabled: check_response,
     },
     data: _.shuffle(practice_conjunction_trials_info.key_press),
     key1: "s",
@@ -158,7 +158,7 @@ const practice_feature = custom_views.keypress_FIT_practice({
     //"get ready!" on white screen
     fix_duration: 1000,
     hook: {
-      check_response,
+      after_response_enabled: check_response,
     },
     data: _.shuffle(practice_feature_trials_info.key_press),
     key1: "s",
@@ -177,7 +177,7 @@ const main_feature = custom_views.keypress_FIT_main({
     //"get ready!" on white screen
     fix_duration: 1000,
     hook: {
-      check_response,
+      after_response_enabled: check_response,
     },
     data: _.shuffle(main_feature_trials_info.key_press),
     key1: "s",
@@ -197,7 +197,7 @@ const main_conjunction = custom_views.keypress_FIT_main({
     },
     fix_duration: 1000,
     hook: {
-      check_response,
+      after_response_enabled: check_response,
     },
     //"get ready!" on white screen
     data: _.shuffle(main_conjunction_trials_info.key_press),
