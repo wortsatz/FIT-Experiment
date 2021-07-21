@@ -153,8 +153,8 @@ const practice_conjunction = custom_views.keypress_FIT_practice({
     data: _.shuffle(practice_conjunction_trials_info.key_press),
     key1: "s",
     key2: "l",
-    s: "negative",
-    l: "positive",
+    s: "no target",
+    l: "target",
 });
 
 const practice_feature = custom_views.keypress_FIT_practice({
@@ -169,8 +169,8 @@ const practice_feature = custom_views.keypress_FIT_practice({
     data: _.shuffle(practice_feature_trials_info.key_press),
     key1: "s",
     key2: "l",
-    s: "negative",
-    l: "positive",
+    s: "no target",
+    l: "target",
 });
 const main_feature = custom_views.keypress_FIT_main({
     trials: 64,
@@ -184,8 +184,8 @@ const main_feature = custom_views.keypress_FIT_main({
     data: _.shuffle(main_feature_trials_info.key_press),
     key1: "s",
     key2: "l",
-    s: "negative",
-    l: "positive",
+    s: "no target",
+    l: "target",
 });
 
 
@@ -201,8 +201,8 @@ const main_conjunction = custom_views.keypress_FIT_main({
     data: _.shuffle(main_conjunction_trials_info.key_press),
     key1: "s",
     key2: "l",
-    s: "negative",
-    l: "positive",
+    s: "no target",
+    l: "target",
 });
 
 const dominant_hand = magpieViews.view_generator("forced_choice", {
