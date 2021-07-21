@@ -11,8 +11,14 @@
 // 6 blocks a 128 trails (AABABB)
 
 
-
-//nur color bis jetzt hinzugefügt //vlt noch shape hinzufügen
+const forced_choice_trials = [
+    {
+        question: "What is your dominant hand?",
+        option1: "Left",
+        option2: "Right"
+    },
+];;
+//practice: nur color bis jetzt hinzugefügt //vlt noch shape hinzufügen
 const practice_feature_trials_info = {
     key_press: [
       {
