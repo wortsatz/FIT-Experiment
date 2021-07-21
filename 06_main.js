@@ -102,7 +102,7 @@ $("document").ready(function() {
 });
 }
 
-if(mapping == "GroupB"){
+else{
 
 $("document").ready(function() {
     // prevent scrolling when space is pressed

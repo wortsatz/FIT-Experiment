@@ -50,7 +50,7 @@ const main_instructions = magpieViews.view_generator("instructions", {
   You have now finished the practice phase and hopefully well prepared for the main trials.
   They are identical in format and content.
   In order to proceed, press the button below.`,
-  buttonText: 'proceed to main trails'
+  buttonText: 'proceed to main trials'
 });
 
 
