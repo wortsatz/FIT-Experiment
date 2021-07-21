@@ -13,8 +13,8 @@ const dominant_hand_info = {
     forced_choice: [
         {
             question: "What is your dominant hand?",
-            option1: 'right',
-            option2: 'left',
+            option1: 'left',
+            option2: 'right',
         },
     ],
 };
