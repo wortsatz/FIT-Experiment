@@ -134,7 +134,6 @@ const practice_conjunction = custom_views.keypress_FIT_practice({
     hook: {
       after_pause: get_ready,
     },
-    next(),
     //"get ready!" on white screen
     fix_duration: 1000,
     data: _.shuffle(practice_conjunction_trials_info.key_press),
