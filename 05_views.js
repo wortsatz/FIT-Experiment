@@ -21,7 +21,7 @@ const intro = magpieViews.view_generator("intro", {
 const forced_choice_trials = magpieViews.view_generator('forced_choice', {
         question: "What is your dominant hand?",
         option1: "left",
-        option2: "right"
+        option2: "right",
     });
 
 //general instructions
@@ -198,4 +198,16 @@ const main_conjunction = custom_views.keypress_FIT_main({
     key2: "l",
     s: "negative",
     l: "positive",
+});
+
+const dominant_hand = magpieViews.forcedChoice({
+    trials: 1,
+    name: 'dominant hand',
+    trial_type: 'practice',
+    data: forced_choice_trials.forcedChoice,
+    fix_duration: 500,
+    pause: 500,
+    hook: {
+        after_response_enabled: checkResponse
+    }
 });
