@@ -18,11 +18,15 @@ $("document").ready(function() {
             intro,
             dominant_hand,
             instructions,
-            _.shuffle(
-              [(instructions_conjunction, practice_conjunction),
-              (instructions_feature, practice_feature)]),
+            _.shuffle([
+              loop([instructions_conjunction, practice_conjunction]),
+              loop([instructions_feature, practice_feature])
+            ]),
             main_instructions,
-            _.shuffle([(main_conjunction, after_block), (main_feature, after_block)]),
+            _.shuffle([
+              loop([main_conjunction, after_block]),
+              loop([main_feature, after_block])
+            ]),
             post_test,
             thanks
         ],
