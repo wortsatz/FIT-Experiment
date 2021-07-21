@@ -137,6 +137,9 @@ const practice_conjunction = custom_views.keypress_FIT_practice({
     },
     //"get ready!" on white screen
     fix_duration: 1000,
+    hook: {
+      check_response,
+    },
     data: _.shuffle(practice_conjunction_trials_info.key_press),
     key1: "s",
     key2: "l",
@@ -154,6 +157,9 @@ const practice_feature = custom_views.keypress_FIT_practice({
     },
     //"get ready!" on white screen
     fix_duration: 1000,
+    hook: {
+      check_response,
+    },
     data: _.shuffle(practice_feature_trials_info.key_press),
     key1: "s",
     key2: "l",
@@ -170,6 +176,9 @@ const main_feature = custom_views.keypress_FIT_main({
     },
     //"get ready!" on white screen
     fix_duration: 1000,
+    hook: {
+      check_response,
+    },
     data: _.shuffle(main_feature_trials_info.key_press),
     key1: "s",
     key2: "l",
@@ -186,8 +195,11 @@ const main_conjunction = custom_views.keypress_FIT_main({
     hook: {
       after_pause: get_ready,
     },
-    //"get ready!" on white screen
     fix_duration: 1000,
+    hook: {
+      check_response,
+    },
+    //"get ready!" on white screen
     data: _.shuffle(main_conjunction_trials_info.key_press),
     key1: "s",
     key2: "l",
