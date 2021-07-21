@@ -131,7 +131,7 @@ const practice_conjunction = custom_views.keypress_FIT_practice({
     trials: 8,
     name: 'practice',
     trial_type: 'practice',
-    pause: 250,
+    pause: 1000,
     hook: {
       after_pause: get_ready,
     },
@@ -148,7 +148,7 @@ const practice_feature = custom_views.keypress_FIT_practice({
     trials: 8,
     name: 'practice',
     trial_type: 'practice',
-    pause: 250,
+    pause: 1000,
     hook: {
       after_pause: get_ready,
     },
@@ -164,7 +164,7 @@ const main_feature = custom_views.keypress_FIT_main({
     trials: 64,
     name: 'main',
     trial_type: 'main',
-    pause: 250,
+    pause: 1000,
     hook: {
       after_pause: get_ready,
     },
@@ -182,7 +182,7 @@ const main_conjunction = custom_views.keypress_FIT_main({
     trials: 64,
     name: 'main',
     trial_type: 'main',
-    pause: 250,
+    pause: 1000,
     hook: {
       after_pause: get_ready,
     },
