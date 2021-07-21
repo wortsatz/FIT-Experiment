@@ -134,13 +134,11 @@ const practice_conjunction = custom_views.keypress_FIT_practice({
     pause: 250,
     hook: {
       after_pause: get_ready,
+      after_response_enabled: check_response,
     },
     //"get ready!" on white screen
     fix_duration: 250,
     data: _.shuffle(practice_conjunction_trials_info.key_press),
-    hook: {
-     after_response_enabled: check_response
-    },
     key1: "s",
     key2: "l",
     s: "negative",
@@ -154,13 +152,11 @@ const practice_feature = custom_views.keypress_FIT_practice({
     pause: 250,
     hook: {
       after_pause: get_ready,
+      after_response_enabled: check_response,
     },
     //"get ready!" on white screen
     fix_duration: 1000,
     data: _.shuffle(practice_feature_trials_info.key_press),
-    hook: {
-     after_response_enabled: check_response
-    },
     key1: "s",
     key2: "l",
     s: "neative",
@@ -173,13 +169,11 @@ const main_feature = custom_views.keypress_FIT_main({
     pause: 250,
     hook: {
       after_pause: get_ready,
+      after_response_enabled: check_response,
     },
     //"get ready!" on white screen
     fix_duration: 1000,
     data: _.shuffle(main_feature_trials_info.key_press),
-    hook: {
-     after_response_enabled: check_response
-    },
     key1: "s",
     key2: "l",
     s: "negative",
@@ -194,13 +188,11 @@ const main_conjunction = custom_views.keypress_FIT_main({
     pause: 250,
     hook: {
       after_pause: get_ready,
+      after_response_enabled: check_response,
     },
     fix_duration: 1000,
     //"get ready!" on white screen
     data: _.shuffle(main_conjunction_trials_info.key_press),
-    hook: {
-     after_response_enabled: check_response
-    },
     key1: "s",
     key2: "l",
     s: "negative",
