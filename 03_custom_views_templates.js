@@ -110,7 +110,7 @@ custom_views.keypress_FIT_practice = function(config) {
 
                     magpie.trial_data.push(trial_data);
                     $("body").off("keydown", handleKeyPress);
-                    setTimeout(magpie.findNextView, 400); // delay to accomodate feedback
+                    setTimeout(magpie.findNextView, 1500); // delay to accomodate feedback
                 }
             };
 
