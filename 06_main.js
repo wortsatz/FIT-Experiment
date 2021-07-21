@@ -16,6 +16,7 @@ $("document").ready(function() {
         // You have to specify all views you want to use in this experiment and the order of them
         views_seq: [
             intro,
+            forced_choice_trials,
             instructions,
             _.shuffle(
               [(instructions_conjunction, practice_conjunction),

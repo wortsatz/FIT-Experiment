@@ -18,6 +18,13 @@ const intro = magpieViews.view_generator("intro", {
   buttonText: 'begin the experiment'
 });
 
+const forced_choice_trials = [
+    {
+        question: "What is your dominant hand?",
+        option1: "left",
+        option2: "right"
+    }
+];
 //general instructions
 //need to be changed!!!!
 const instructions = magpieViews.view_generator("instructions", {
@@ -131,7 +138,6 @@ const practice_conjunction = custom_views.keypress_FIT_practice({
     name: 'practice',
     trial_type: 'practice',
     pause: 250,
-    fix_duration: 1000,
     hook: {
       after_pause: get_ready,
     },
