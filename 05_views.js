@@ -18,6 +18,7 @@ const intro = magpieViews.view_generator("intro", {
   buttonText: 'begin the experiment'
 });
 
+
 //general instructions
 //need to be changed!!!!
 const instructions = magpieViews.view_generator("instructions", {
@@ -37,7 +38,7 @@ const instructions = magpieViews.view_generator("instructions", {
   <br />
   <br />
   In order to prepare you for the experimental setup you will first run through some practice trials before you proceed to the main task.
-  If you feel ready to start the practice trails, please click on the "start with practice trials"-button down below.`,
+  If you feel ready to start the practice trials, please click on the "start with practice trials"-button down below.`,
   buttonText: 'start with practice trials'
 });
 
@@ -46,41 +47,50 @@ const main_instructions = magpieViews.view_generator("instructions", {
   name: 'main_instructions',
   title: 'Instructions',
   text: `So far so good!
-  You now finished the practice phase and are hopefully well prepared for the main
-  part of the experiment. The main trials are identical in form and content
-  as the practice trials. In order to proceed, press the button below.`,
+  You have now finished the practice phase and hopefully well prepared for the main trials.
+  They are identical in format and content.
+  In order to proceed, press the button below.`,
   buttonText: 'proceed to main trails'
 });
 
+
 const instructions_conjunction = magpieViews.view_generator("instructions", {
   trials: 1,
-  name: 'instructions_feature',
+  name: 'instructions_conjunction',
   title: 'Instructions',
   text: `The target you are supposed to find is a green T.
   Again, if you detect the target "green T" press L, otherwise press S.`,
-  buttonText: 'proceed to practice trails'
+  buttonText: 'proceed to trials'
 });
 
 
 const instructions_feature = magpieViews.view_generator("instructions", {
   trials: 1,
-  name: 'instructions_conjunction',
+  name: 'instructions_feature',
   title: 'Instructions',
   text: `Now you are asked to search for two targets, each defined by a
-  different single feature: a color (blue) and a shape (S). Hence, the target you are supposed to find is either a blue X,
-  blue T (color) or a brown or green S (shape).
+  different single feature: a color (blue) and a shape (S). Hence, the target you are supposed to find is either a blue X, blue T (color) or a brown or green S (shape).
   In the presence of the target press "L", otherwise press "S".`,
-  buttonText: 'Start the experiment'
+  buttonText: 'proceed to trails'
 });
+
+const after_block = magpieViews.view_generator("instructions", {
+  trials: 1,
+  name: 'after_block',
+  title: 'Pause',
+  text: `Good job! You completed one block. If you feel ready to proceed click on the botton below. `,
+  buttonText: 'proceed to trials'
+});
+
 // In the post test questionnaire you can ask your participants addtional questions
 const post_test = magpieViews.view_generator("post_test", {
   trials: 1,
   name: 'post_test',
   title: 'Additional information',
-  text: 'Good job! You are almost done with the experiment. The last step is to answer the following questions.',
+  text: ' Good job! You nearly done with the experiment. The last step is to answer the following questions.'
 
   // buttonText: 'continue',
-  dominant_hand: 'dominant hand',
+  // dominant_hand: 'dominant hand',
   // dominant_left: 'left',
   // dominant_right: 'right',
   // age_question: 'age',
@@ -134,14 +144,9 @@ const practice_conjunction = custom_views.keypress_FIT_practice({
     pause: 250,
     hook: {
       after_pause: get_ready,
-      next(),
-    },
-    fix_duration: 1000,
-    hook: {
-      after_response_enabled: check_response,
-      next(),
     },
     //"get ready!" on white screen
+    fix_duration: 1000,
     data: _.shuffle(practice_conjunction_trials_info.key_press),
     key1: "s",
     key2: "l",
@@ -156,17 +161,13 @@ const practice_feature = custom_views.keypress_FIT_practice({
     pause: 250,
     hook: {
       after_pause: get_ready,
-      next(),
     },
+    //"get ready!" on white screen
     fix_duration: 1000,
-    hook: {
-      after_response_enabled: check_response,
-      next(),
-    },
     data: _.shuffle(practice_feature_trials_info.key_press),
     key1: "s",
     key2: "l",
-    s: "neative",
+    s: "negative",
     l: "positive",
 });
 const main_feature = custom_views.keypress_FIT_main({
@@ -176,13 +177,9 @@ const main_feature = custom_views.keypress_FIT_main({
     pause: 250,
     hook: {
       after_pause: get_ready,
-      next(),
     },
+    //"get ready!" on white screen
     fix_duration: 1000,
-    hook: {
-      after_response_enabled: check_response,
-      next(),
-    },
     data: _.shuffle(main_feature_trials_info.key_press),
     key1: "s",
     key2: "l",
@@ -198,14 +195,9 @@ const main_conjunction = custom_views.keypress_FIT_main({
     pause: 250,
     hook: {
       after_pause: get_ready,
-      next(),
-    },
-    fix_duration: 1000,
-    hook: {
-      after_response_enabled: check_response,
-      next(),
     },
     //"get ready!" on white screen
+    fix_duration: 1000,
     data: _.shuffle(main_conjunction_trials_info.key_press),
     key1: "s",
     key2: "l",
@@ -213,20 +205,8 @@ const main_conjunction = custom_views.keypress_FIT_main({
     l: "positive",
 });
 
-
-const trial_info = {
-    forced_choice: [
-        {
-            question: "What's on the bread?",
-            picture: "images/question_mark_02.png",
-            option1: 'jam',
-            option2: 'ham'
-        },
-        {
-            question: "What's the weather like?",
-            picture: "images/weather.jpg",
-            option1: "shiny",
-            option2: "rainbow"
-        }
-    ],
-};
+const dominant_hand = magpieViews.view_generator("forced_choice", {
+    trials: dominant_hand_info.forced_choice.length,
+    name: 'dominant_hand',
+    data: dominant_hand_info.forced_choice
+});
