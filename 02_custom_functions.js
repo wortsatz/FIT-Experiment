@@ -49,8 +49,16 @@ const time_limit = function(data, next) {
     next();
 };
 
+// Declare your hooks here
+
+// Set an intermediate alert to prpare oarticipant for stimulus
+const get_ready = function(data, next) {
+    alert("Get ready!");
+    next();
+    }
+
 // compares the chosen answer to the value of `option1`
-check_response = function(data, next) {
+const check_response = function(data, next) {
     $('input[name=answer]').on('change', function(e) {
         if (e.target.value === data.correct) {
             alert('Correct!'.concat('You reacted within') .concat (data.RT) .concat('ms.'));
@@ -59,14 +67,5 @@ check_response = function(data, next) {
         }
         next();
     })
-}
-
-// Declare your hooks here
-
-
-// compares the chosen answer to the value of `option1`
-get_ready = function(data, next) {
-    alert('Get ready!');
-    next();
-
-}
+};
+  
