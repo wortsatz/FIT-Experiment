@@ -18,13 +18,12 @@ const intro = magpieViews.view_generator("intro", {
   buttonText: 'begin the experiment'
 });
 
-const forced_choice_trials = [
-    {
+const forced_choice_trials = magpieViews.view_generator('forced_choice', {
         question: "What is your dominant hand?",
         option1: "left",
         option2: "right"
-    }
-];
+    });
+
 //general instructions
 //need to be changed!!!!
 const instructions = magpieViews.view_generator("instructions", {
