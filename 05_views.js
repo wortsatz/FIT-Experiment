@@ -157,7 +157,6 @@ const practice_feature = custom_views.keypress_FIT_practice({
     trials: 8,
     name: 'practice',
     trial_type: 'practice',
-    pause: 250,
     hook: {
       after_pause: get_ready,
     },
