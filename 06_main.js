@@ -18,11 +18,10 @@ $("document").ready(function() {
             intro,
             dominant_hand,
             instructions,
-            magpieUtils.loop(
             instructions_conjunction,
             practice_conjunction,
             instructions_feature,
-            practice_feature),
+            practice_feature,
             main_instructions,
             main_conjunction,
             after_block,
