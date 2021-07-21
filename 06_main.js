@@ -19,13 +19,13 @@ $("document").ready(function() {
             dominant_hand,
             instructions,
             _.shuffle([
-              loop([instructions_conjunction, practice_conjunction]),
-              loop([instructions_feature, practice_feature])
+              _.loop([instructions_conjunction, practice_conjunction], 1),
+              _.loop([instructions_feature, practice_feature], 1)
             ]),
             main_instructions,
             _.shuffle([
-              loop([main_conjunction, after_block]),
-              loop([main_feature, after_block])
+              _.loop([main_conjunction, after_block], 3),
+              _.loop([main_feature, after_block], 3)
             ]),
             post_test,
             thanks
