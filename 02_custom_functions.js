@@ -15,11 +15,12 @@ const coin = _.sample(["head", "tail"]); // You can determine global (random) pa
 */
 
 
-//generating random participant IDs
+/* For generating random participant IDs */
+    // https://stackoverflow.com/questions/1349404/generate-random-string-characters-in-javascript
+// dec2hex :: Integer -> String
 const dec2hex = function(dec) {
     return ("0" + dec.toString(16)).substr(-2);
 };
-
 // generateId :: Integer -> String
 const generateID = function(len) {
     let arr = new Uint8Array((len || 40) /2);
@@ -48,23 +49,26 @@ const time_limit = function(data, next) {
     next();
 };
 
+// Declare your hooks here
+
+// Set an intermediate alert to prepare participant for stimulus
+const get_ready = function(data, next) {
+    alert("Get ready!");
+    next();
+    }
+
 // compares the chosen answer to the value of `option1`
-check_response = function(data, next) {
+const check_response = function(data, next) {
     $('input[name=answer]').on('change', function(e) {
         if (e.target.value === data.correct) {
-            alert('Correct!'+ 'Your reaction time is' + data.RT);
+            alert('Correct!'.concat('You reacted within') .concat (RT) .concat('ms.'));
         } else {
-            alert('Incorrect! The correct answer was ', data.correct, 'Your reaction time is', data.RT); // data.RT?? not sure
+            alert('Incorrect! The correct answer was ' .concat(data.correct) .concat('You reacted within')  .concat(RT) .concat('ms.')); // data.RT?? not sure
         }
         next();
     })
-}
+};
 
-// Declare your hooks here
-
-
-// compares the chosen answer to the value of `option1`
-get_ready = function(data, next){
-    alert('Get ready! Press a key!');
-    next();
+const dominant_hand = function(data, next) {
+  answerContainerElem =
 }
