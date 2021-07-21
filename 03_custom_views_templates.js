@@ -194,7 +194,7 @@ custom_views.keypress_FIT_main = function(config) {
                         correctness = "incorrect";
                         // show feedback
                         $(".magpie-view-stimulus").addClass("magpie-invisible");
-                        $('#feedback').text('Incorrect! You reacted within ' + RT + ' ms.'');
+                        $('#feedback').text('Incorrect! You reacted within ' + RT + ' ms.');
                     }
 
                     const trial_data = {
