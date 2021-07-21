@@ -55,7 +55,7 @@ const main_instructions = magpieViews.view_generator("instructions", {
 
 
 const instructions_conjunction = magpieViews.view_generator("instructions", {
-  trials: 4,
+  trials: 1,
   name: 'instructions_conjunction',
   title: 'Instructions',
   text: `The target you are supposed to find is a green T.
@@ -65,7 +65,7 @@ const instructions_conjunction = magpieViews.view_generator("instructions", {
 
 
 const instructions_feature = magpieViews.view_generator("instructions", {
-  trials: 4,
+  trials: 1,
   name: 'instructions_feature',
   title: 'Instructions',
   text: `You are supposed to look for two targets, each defined by a
@@ -75,7 +75,7 @@ const instructions_feature = magpieViews.view_generator("instructions", {
 });
 
 const after_block = magpieViews.view_generator("instructions", {
-  trials: 6,
+  trials: 1,
   name: 'after_block',
   title: 'Take a short break!',
   text: `Good job! You completed one block. If you feel ready to proceed click on the botton below. `,
