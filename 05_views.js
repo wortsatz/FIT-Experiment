@@ -87,7 +87,11 @@ const post_test = magpieViews.view_generator("post_test", {
   trials: 1,
   name: 'post_test',
   title: 'Additional information',
-  text: ' Good job! You nearly done with the experiment. The last step is to answer the following questions.'
+  text: ' Good job! You nearly done with the experiment. The last step is to answer the following questions.',
+  edu_question: '<span style="background-color:#FFFF00">Dominant hand</span>',
+  edu_graduated_high_school: 'left',
+  edu_graduated_college: 'right',
+  edu_higher_degree: 'I am able to use both hands equally well',
 
   // buttonText: 'continue',
   // dominant_hand: 'dominant hand',
@@ -109,7 +113,7 @@ const post_test = magpieViews.view_generator("post_test", {
 const thanks = magpieViews.view_generator("thanks", {
   trials: 1,
   name: 'thanks',
-  title: 'Perfect, you are done! Thank you for taking part in this experiment!',
+  title: 'Perfect, you are done! Thank you for taking part in our experiment!',
   prolificConfirmText: 'Press the button'
 });
 
