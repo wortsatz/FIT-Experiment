@@ -71,7 +71,7 @@ const instructions_feature = magpieViews.view_generator("instructions", {
   text: `You are supposed to look for two targets, each defined by a
   different single feature: a color (blue) and a shape (S). Hence, the target you are supposed to find is either a blue X, blue T (color) or a brown or green S (shape).
   In the presence of the target press "L", otherwise press "S".`,
-  buttonText: 'proceed to trails'
+  buttonText: 'proceed to trials'
 });
 
 const after_block = magpieViews.view_generator("instructions", {
@@ -176,7 +176,6 @@ const main_feature = custom_views.keypress_FIT_main({
     trials: 64,
     name: 'main',
     trial_type: 'main',
-    pause: 250,
     hook: {
       after_pause: get_ready,
     },
@@ -194,7 +193,6 @@ const main_conjunction = custom_views.keypress_FIT_main({
     trials: 64,
     name: 'main',
     trial_type: 'main',
-    pause: 250,
     hook: {
       after_pause: get_ready,
     },
