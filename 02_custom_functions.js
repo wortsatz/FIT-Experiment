@@ -85,5 +85,5 @@ hide_stimulus = function(data, next) {
       elemSize: 30,
       total: 40
   }
-  next(),
+  next();
 }
