@@ -69,22 +69,22 @@ get_ready = function(data, next){
     next();
 }
 
-hide_stim = function(data, next) {
-  question: 'Get ready!',
-  canvas: {
-      canvasSettings: {
-          height: 60,
-          width: 80,
-          backrgound: 'white'
-      },
-      focalColor: 'white',
-      focalShape: 'circle',
-      focalNumber: 23,
-      otherShape: 'square',
-      otherColor: 'white',
-      sort: 'random',
-      elemSize: 3,
-      total: 4,
-  }
-  next();
-}
+//hide_stim = function(data, next) {
+  //question: 'Get ready!',
+  //canvas: {
+    //  canvasSettings: {
+      //    height: 60,
+        //  width: 80,
+          //backrgound: 'white'
+    //  },
+    //  focalColor: 'white',
+    //  focalShape: 'circle',
+    //  focalNumber: 23,
+    //  otherShape: 'square',
+    //  otherColor: 'white',
+    //  sort: 'random',
+    //  elemSize: 3,
+    //  total: 4,
+//  }
+//  next();
+//}
