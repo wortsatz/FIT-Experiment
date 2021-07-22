@@ -58,32 +58,13 @@ check_response = function(data, next) {
         }
         next();
     })
-}
+};
 
 // Declare your hooks here
 
 
 // compares the chosen answer to the value of `option1`
 get_ready = function(data, next){
-    alert('Get ready! Press a key!');
-    next();
-}
-
-hide_stimulus = function(data, next) {
-  canvas: {
-      canvasSettings: {
-          height: 600,
-          width: 800,
-          backrgound: 'white'
-      },
-      focalColor: 'white',
-      focalShape: 'circle',
-      focalNumber: 23,
-      otherShape: 'square',
-      otherColor: 'white',
-      sort: 'random',
-      elemSize: 30,
-      total: 40
-  }
+  alert('Get ready!');
   next();
-}
+};
