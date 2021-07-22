@@ -58,33 +58,14 @@ check_response = function(data, next) {
         }
         next();
     })
-}
+};
 
 // Declare your hooks here
 
 
 // compares the chosen answer to the value of `option1`
 get_ready = function(data, next){
-    alert('Get ready! Press a key!');
-    next();
-}
-
-const hide_stimulus = function(data, next) {
-  question: 'Get ready!',
-  canvas: {
-      canvasSettings: {
-          height: 60,
-          width: 80,
-          backrgound: 'white'
-      },
-      focalColor: 'white',
-      focalShape: 'circle',
-      focalNumber: 23,
-      otherShape: 'square',
-      otherColor: 'white',
-      sort: 'random',
-      elemSize: 3,
-      total: 4,
-  }
+  $(".magpie-view-stimulus").addClass("magpie-invisible");
+  $('#feedback').text('Get ready!');
   next();
-}
+};
