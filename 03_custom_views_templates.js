@@ -125,6 +125,7 @@ custom_views.keypress_FIT_practice = function(config) {
             magpieUtils.view.createTrialDOM(
                 {
                     pause: config.pause,
+                    fix_duration: config.fix_duration,
                     stim_duration: config.stim_duration,
                     data: config.data[CT],
                     evts: config.hook,
@@ -254,6 +255,7 @@ custom_views.keypress_FIT_main = function(config) {
             magpieUtils.view.createTrialDOM(
                 {
                     pause: config.pause,
+                    fix_duration: config.fix_duration,
                     stim_duration: config.stim_duration,
                     data: config.data[CT],
                     evts: config.hook,
