@@ -60,14 +60,12 @@ custom_views.keypress_FIT_practice = function(config) {
                         // show feedback
                         $(".magpie-view-stimulus").addClass("magpie-invisible");
                         $('#feedback').text('Correct! You reacted within ' + RT + ' ms.');
-                        $('#feedback').text('Get ready!');
 
                     } else {
                         correctness = "incorrect";
                         // show feedback
                         $(".magpie-view-stimulus").addClass("magpie-invisible");
                         $('#feedback').text('Incorrect! You reacted within ' + RT + ' ms.');
-                        $('#feedback').text('Get ready!');
                     }
 
                     const trial_data = {
