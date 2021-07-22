@@ -91,8 +91,12 @@ $("document").ready(function() {
                 // list the view-names of the views for which you want a progress bar
                 practice_conjunction.name,
                 practice_feature.name,
-                main_conjunction.name,
-                main_feature.name,
+                main_conjunction_1.name,
+                main_conjunction_2.name,
+                main_conjunction_3.name,
+                main_feature_1.name,
+                main_feature_2.name,
+                main_feature_3.name,
             ],
              // Possible styles are "default", "separate" and "chunks"
             style: "separate",
@@ -176,8 +180,12 @@ $("document").ready(function() {
                 // list the view-names of the views for which you want a progress bar
                 practice_conjunction.name,
                 practice_feature.name,
-                main_conjunction.name,
-                main_feature.name,
+                main_conjunction_1.name,
+                main_conjunction_2.name,
+                main_conjunction_3.name,
+                main_feature_1.name,
+                main_feature_2.name,
+                main_feature_3.name,
             ],
              // Possible styles are "default", "separate" and "chunks"
             style: "separate",
