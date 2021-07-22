@@ -69,8 +69,8 @@ get_ready = function(data, next){
     next();
 }
 
-hide_stimulus = function(data, next) {
-  alert('Get ready!'),
+const hide_stimulus = function(data, next) {
+  question: 'Get ready!',
   canvas: {
       canvasSettings: {
           height: 60,
