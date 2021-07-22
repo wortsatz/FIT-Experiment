@@ -65,6 +65,6 @@ check_response = function(data, next) {
 
 // compares the chosen answer to the value of `option1`
 get_ready = function(data, next){
-    text('Get ready! Press the space bar or enter to continue!');
+    alert('Get ready! Press the space bar or enter to continue!');
     next();
 }
