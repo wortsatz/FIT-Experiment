@@ -145,6 +145,7 @@ const practice_conjunction = custom_views.keypress_FIT_practice({
     trials: 8,
     name: 'practice',
     trial_type: 'practice',
+    pause: 250,
     hook: {
       after_pause: get_ready,
     },
@@ -152,7 +153,7 @@ const practice_conjunction = custom_views.keypress_FIT_practice({
     fix_duration: 1000,
     hook: {
       after_fix_point: hide_stimulus,
-    }
+    },
     data: _.shuffle(practice_conjunction_trials_info.key_press),
     key1: "s",
     key2: "l",
@@ -164,6 +165,7 @@ const practice_feature = custom_views.keypress_FIT_practice({
     trials: 8,
     name: 'practice',
     trial_type: 'practice',
+    pause: 250,
     hook: {
       after_pause: get_ready,
     },
@@ -171,7 +173,7 @@ const practice_feature = custom_views.keypress_FIT_practice({
     fix_duration: 1000,
     hook: {
       after_fix_point: hide_stimulus,
-    }
+    },
     data: _.shuffle(practice_feature_trials_info.key_press),
     key1: "s",
     key2: "l",
@@ -182,6 +184,7 @@ const main_feature = custom_views.keypress_FIT_main({
     trials: 64,
     name: 'main',
     trial_type: 'main',
+    pause: 250,
     hook: {
       after_pause: get_ready,
     },
@@ -189,7 +192,7 @@ const main_feature = custom_views.keypress_FIT_main({
     fix_duration: 1000,
     hook: {
       after_fix_point: hide_stimulus,
-    }
+    },
     data: _.shuffle(main_feature_trials_info.key_press),
     key1: "s",
     key2: "l",
@@ -202,6 +205,7 @@ const main_conjunction = custom_views.keypress_FIT_main({
     trials: 64,
     name: 'main',
     trial_type: 'main',
+    pause: 250,
     hook: {
       after_pause: get_ready,
     },
@@ -209,7 +213,7 @@ const main_conjunction = custom_views.keypress_FIT_main({
     fix_duration: 1000,
     hook: {
       after_fix_point: hide_stimulus,
-    }
+    },
     data: _.shuffle(main_conjunction_trials_info.key_press),
     key1: "s",
     key2: "l",
