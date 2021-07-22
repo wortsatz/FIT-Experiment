@@ -58,16 +58,16 @@ check_response = function(data, next) {
         }
         next();
     })
-}
+};
 
 // Declare your hooks here
 
 
 // compares the chosen answer to the value of `option1`
 get_ready = function(data, next){
-    $('#reminder').alert('Get ready!');
+    alert('Get ready!');
     next();
-}
+};
 
 //hide_stim = function(data, next) {
   //question: 'Get ready!',
