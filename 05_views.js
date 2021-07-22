@@ -145,7 +145,6 @@ const practice_conjunction = custom_views.keypress_FIT_practice({
     trials: 8,
     name: 'practice',
     trial_type: 'practice',
-    pause: 250,
     hook: {
       after_pause: get_ready,
     },
@@ -162,7 +161,6 @@ const practice_feature = custom_views.keypress_FIT_practice({
     trials: 8,
     name: 'practice',
     trial_type: 'practice',
-    pause: 250,
     hook: {
       after_pause: get_ready,
     },
@@ -174,11 +172,10 @@ const practice_feature = custom_views.keypress_FIT_practice({
     s: "no target",
     l: "target",
 });
-const main_feature = custom_views.keypress_FIT_main({
+const main_feature_1 = custom_views.keypress_FIT_main({
     trials: 64,
     name: 'main',
     trial_type: 'main',
-    pause: 250,
     hook: {
       after_pause: get_ready,
     },
@@ -191,12 +188,74 @@ const main_feature = custom_views.keypress_FIT_main({
     l: "target",
 });
 
-
-const main_conjunction = custom_views.keypress_FIT_main({
+const main_feature_2 = custom_views.keypress_FIT_main({
     trials: 64,
     name: 'main',
     trial_type: 'main',
-    pause: 250,
+    hook: {
+      after_pause: get_ready,
+    },
+    //"get ready!" on white screen
+    fix_duration: 1000,
+    data: _.shuffle(main_feature_trials_info.key_press),
+    key1: "s",
+    key2: "l",
+    s: "no target",
+    l: "target",
+});
+
+const main_feature_3 = custom_views.keypress_FIT_main({
+    trials: 64,
+    name: 'main',
+    trial_type: 'main',
+    hook: {
+      after_pause: get_ready,
+    },
+    //"get ready!" on white screen
+    fix_duration: 1000,
+    data: _.shuffle(main_feature_trials_info.key_press),
+    key1: "s",
+    key2: "l",
+    s: "no target",
+    l: "target",
+});
+
+const main_conjunction_1 = custom_views.keypress_FIT_main({
+    trials: 64,
+    name: 'main',
+    trial_type: 'main',
+    hook: {
+      after_pause: get_ready,
+    },
+    //"get ready!" on white screen
+    fix_duration: 1000,
+    data: _.shuffle(main_conjunction_trials_info.key_press),
+    key1: "s",
+    key2: "l",
+    s: "no target",
+    l: "target",
+});
+
+const main_conjunction_2 = custom_views.keypress_FIT_main({
+    trials: 64,
+    name: 'main',
+    trial_type: 'main',
+    hook: {
+      after_pause: get_ready,
+    },
+    //"get ready!" on white screen
+    fix_duration: 1000,
+    data: _.shuffle(main_conjunction_trials_info.key_press),
+    key1: "s",
+    key2: "l",
+    s: "no target",
+    l: "target",
+});
+
+const main_conjunction_3 = custom_views.keypress_FIT_main({
+    trials: 64,
+    name: 'main',
+    trial_type: 'main',
     hook: {
       after_pause: get_ready,
     },

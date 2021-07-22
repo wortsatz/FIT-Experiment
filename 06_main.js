@@ -47,27 +47,27 @@ $("document").ready(function() {
             main_instructions,
             //conjunction
             instructions_conjunction,
-            main_conjunction,
+            main_conjunction_1,
             after_block,
             //conjunction
             instructions_conjunction,
-            main_conjunction,
+            main_conjunction_2,
             after_block,
             //feature
             instructions_feature,
-            main_feature,
+            main_feature_1,
             after_block,
             //conjunction
             instructions_conjunction,
-            main_conjunction,
+            main_conjunction_3,
             after_block,
             //feature
             instructions_feature,
-            main_feature,
+            main_feature_2,
             after_block,
             //feature
             instructions_feature,
-            main_feature,
+            main_feature_3,
             after_block,
             //post test and thanks
             post_test,
@@ -100,9 +100,7 @@ $("document").ready(function() {
         }
     });
 });
-}
-
-else{
+}else{
 
 $("document").ready(function() {
     // prevent scrolling when space is pressed
@@ -134,27 +132,27 @@ $("document").ready(function() {
           main_instructions,
           //feature
           instructions_feature,
-          main_feature,
+          main_feature_1,
           after_block,
           //feature
           instructions_feature,
-          main_feature,
+          main_feature_2,
           after_block,
           //conjunction
           instructions_conjunction,
-          main_conjunction,
+          main_conjunction_1,
           after_block,
           //feature
           instructions_feature,
-          main_feature,
+          main_feature_3,
           after_block,
           //conjunction
           instructions_conjunction,
-          main_conjunction,
+          main_conjunction_2,
           after_block,
           //conjunction
           instructions_conjunction,
-          main_conjunction,
+          main_conjunction_3,
           after_block,
           //post test and thanks
           post_test,
