@@ -64,8 +64,10 @@ check_response = function(data, next) {
 // Error feedback if participants exceeds the time for responding
 
 const get_ready = function(data,next){
-  $('#reminder').text('Get ready!');
-  (magpie.findNextView, 1500);
+  window.timeout.push((function(){
+        $('#reminder').text('Get ready!');
+  }, 5000));
+  next();
 };
 // compares the chosen answer to the value of `option1`
 //get_ready = function(data, next){
