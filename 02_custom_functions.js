@@ -63,9 +63,8 @@ check_response = function(data, next) {
 // Declare your hooks here
 // Error feedback if participants exceeds the time for responding
 
-const get_ready = function(e){
-  $(".magpie-view-stimulus").addClass("magpie-invisible");
-  $('#feedback').text('Get ready!');
+const get_ready = function(data,next){
+  $('#reminder').text('Get ready!');
   (magpie.findNextView, 1500);
 };
 // compares the chosen answer to the value of `option1`
