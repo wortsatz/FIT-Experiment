@@ -65,7 +65,7 @@ check_response = function(data, next) {
 
 
 // compares the chosen answer to the value of `option1`
-get_ready = function(data, next){
-  alert('Get ready!');
-  next();
-};
+//get_ready = function(data, next){
+//  alert('Get ready!');
+//  next();
+//};
