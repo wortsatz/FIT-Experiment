@@ -43,12 +43,6 @@ custom_views.keypress_FIT_practice = function(config) {
 
             $("#main").html(viewTemplate);
 
-            const get_ready = function(e){
-              $(".magpie-view-stimulus").addClass("magpie-invisible");
-              $('#feedback').text('Get ready!');
-              (magpie.findNextView, 1500);
-            };
-
             const handleKeyPress = function(e) {
                 const keyPressed = String.fromCharCode(
                     e.which
