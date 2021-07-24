@@ -54,19 +54,45 @@ const main_instructions = magpieViews.view_generator("instructions", {
 });
 
 
-const instructions_conjunction = magpieViews.view_generator("instructions", {
+const instructions_conjunction_1 = magpieViews.view_generator("instructions", {
   trials: 1,
-  name: 'instructions_conjunction',
+  name: 'instructions_conjunction_1',
   title: 'Instructions',
   text: `The target you are supposed to find is a green T.
   Again, if you detect the target "green T" press L, otherwise press S.`,
   buttonText: 'proceed to trials'
 });
 
-
-const instructions_feature = magpieViews.view_generator("instructions", {
+const instructions_conjunction_2 = magpieViews.view_generator("instructions", {
   trials: 1,
-  name: 'instructions_feature',
+  name: 'instructions_conjunction_2',
+  title: 'Instructions',
+  text: `The target you are supposed to find is a green T.
+  Again, if you detect the target "green T" press L, otherwise press S.`,
+  buttonText: 'proceed to trials'
+});
+
+const instructions_conjunction_3 = magpieViews.view_generator("instructions", {
+  trials: 1,
+  name: 'instructions_conjunction_3',
+  title: 'Instructions',
+  text: `The target you are supposed to find is a green T.
+  Again, if you detect the target "green T" press L, otherwise press S.`,
+  buttonText: 'proceed to trials'
+});
+
+const instructions_conjunction_4 = magpieViews.view_generator("instructions", {
+  trials: 1,
+  name: 'instructions_conjunction_4',
+  title: 'Instructions',
+  text: `The target you are supposed to find is a green T.
+  Again, if you detect the target "green T" press L, otherwise press S.`,
+  buttonText: 'proceed to trials'
+});
+
+const instructions_feature_1 = magpieViews.view_generator("instructions", {
+  trials: 1,
+  name: 'instructions_feature_1',
   title: 'Instructions',
   text: `You are supposed to look for two targets, each defined by a
   different single feature: a color (blue) and a shape (S). Hence, the target you are supposed to find is either a blue X, blue T (color) or a brown or green S (shape).
@@ -74,9 +100,80 @@ const instructions_feature = magpieViews.view_generator("instructions", {
   buttonText: 'proceed to trials'
 });
 
-const after_block = magpieViews.view_generator("instructions", {
+const instructions_feature_2 = magpieViews.view_generator("instructions", {
   trials: 1,
-  name: 'after_block',
+  name: 'instructions_feature_2',
+  title: 'Instructions',
+  text: `You are supposed to look for two targets, each defined by a
+  different single feature: a color (blue) and a shape (S). Hence, the target you are supposed to find is either a blue X, blue T (color) or a brown or green S (shape).
+  In the presence of the target press "L", otherwise press "S".`,
+  buttonText: 'proceed to trials'
+});
+
+const instructions_feature_3 = magpieViews.view_generator("instructions", {
+  trials: 1,
+  name: 'instructions_feature_3',
+  title: 'Instructions',
+  text: `You are supposed to look for two targets, each defined by a
+  different single feature: a color (blue) and a shape (S). Hence, the target you are supposed to find is either a blue X, blue T (color) or a brown or green S (shape).
+  In the presence of the target press "L", otherwise press "S".`,
+  buttonText: 'proceed to trials'
+});
+
+const instructions_feature_4 = magpieViews.view_generator("instructions", {
+  trials: 1,
+  name: 'instructions_feature_4',
+  title: 'Instructions',
+  text: `You are supposed to look for two targets, each defined by a
+  different single feature: a color (blue) and a shape (S). Hence, the target you are supposed to find is either a blue X, blue T (color) or a brown or green S (shape).
+  In the presence of the target press "L", otherwise press "S".`,
+  buttonText: 'proceed to trials'
+});
+
+
+const after_block_1 = magpieViews.view_generator("instructions", {
+  trials: 1,
+  name: 'after_block_1',
+  title: 'Take a short break!',
+  text: `Good job! You completed one block. If you feel ready to proceed click on the botton below. `,
+  buttonText: 'proceed to trials'
+});
+
+const after_block_2 = magpieViews.view_generator("instructions", {
+  trials: 1,
+  name: 'after_block_2',
+  title: 'Take a short break!',
+  text: `Good job! You completed one block. If you feel ready to proceed click on the botton below. `,
+  buttonText: 'proceed to trials'
+});
+
+const after_block_3 = magpieViews.view_generator("instructions", {
+  trials: 1,
+  name: 'after_block_3',
+  title: 'Take a short break!',
+  text: `Good job! You completed one block. If you feel ready to proceed click on the botton below. `,
+  buttonText: 'proceed to trials'
+});
+
+const after_block_4 = magpieViews.view_generator("instructions", {
+  trials: 1,
+  name: 'after_block_4',
+  title: 'Take a short break!',
+  text: `Good job! You completed one block. If you feel ready to proceed click on the botton below. `,
+  buttonText: 'proceed to trials'
+});
+
+const after_block_5 = magpieViews.view_generator("instructions", {
+  trials: 1,
+  name: 'after_block_5',
+  title: 'Take a short break!',
+  text: `Good job! You completed one block. If you feel ready to proceed click on the botton below. `,
+  buttonText: 'proceed to trials'
+});
+
+const after_block_6 = magpieViews.view_generator("instructions", {
+  trials: 1,
+  name: 'after_block_6',
   title: 'Take a short break!',
   text: `Good job! You completed one block. If you feel ready to proceed click on the botton below. `,
   buttonText: 'proceed to trials'
@@ -174,7 +271,7 @@ const practice_feature = custom_views.keypress_FIT_practice({
 });
 const main_feature_1 = custom_views.keypress_FIT_main({
     trials: 64,
-    name: 'main',
+    name: 'main_feature_1',
     trial_type: 'main',
     hook: {
       after_pause: get_ready,
@@ -190,7 +287,7 @@ const main_feature_1 = custom_views.keypress_FIT_main({
 
 const main_feature_2 = custom_views.keypress_FIT_main({
     trials: 64,
-    name: 'main',
+    name: 'main_feature_2',
     trial_type: 'main',
     hook: {
       after_pause: get_ready,
@@ -206,7 +303,7 @@ const main_feature_2 = custom_views.keypress_FIT_main({
 
 const main_feature_3 = custom_views.keypress_FIT_main({
     trials: 64,
-    name: 'main',
+    name: 'main_feature_3',
     trial_type: 'main',
     hook: {
       after_pause: get_ready,
@@ -222,7 +319,7 @@ const main_feature_3 = custom_views.keypress_FIT_main({
 
 const main_conjunction_1 = custom_views.keypress_FIT_main({
     trials: 64,
-    name: 'main',
+    name: 'main_conjunction_1',
     trial_type: 'main',
     hook: {
       after_pause: get_ready,
@@ -238,7 +335,7 @@ const main_conjunction_1 = custom_views.keypress_FIT_main({
 
 const main_conjunction_2 = custom_views.keypress_FIT_main({
     trials: 64,
-    name: 'main',
+    name: 'main_conjunction_2',
     trial_type: 'main',
     hook: {
       after_pause: get_ready,
@@ -254,7 +351,7 @@ const main_conjunction_2 = custom_views.keypress_FIT_main({
 
 const main_conjunction_3 = custom_views.keypress_FIT_main({
     trials: 64,
-    name: 'main',
+    name: 'main_conjunction_3',
     trial_type: 'main',
     hook: {
       after_pause: get_ready,
