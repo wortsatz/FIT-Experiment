@@ -66,6 +66,7 @@ const get_ready = function(data,next){
                         // show blank screen
                         $(".magpie-view-stimulus").addClass("magpie-invisible");
                         $('#feedback').text('Get ready!');
+                        (magpie.findNextView, 1500); // delay to accomodate feedback
                         next();
                     }
 
