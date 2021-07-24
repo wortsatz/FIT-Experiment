@@ -39,35 +39,35 @@ $("document").ready(function() {
             //practice trials
             //conjunction
             instructions_conjunction_1,
-            practice_conjunction,
+            //practice_conjunction,
             //feature
             instructions_feature_1,
-            practice_feature,
+            //practice_feature,
             //main trials
             main_instructions,
             //conjunction
             instructions_conjunction_2,
-            main_conjunction_1,
+          //  main_conjunction_1,
             after_block_1,
             //conjunction
             instructions_conjunction_3,
-            main_conjunction_2,
+            //main_conjunction_2,
             after_block_2,
             //feature
             instructions_feature_2,
-            main_feature_1,
+          //  main_feature_1,
             after_block_3,
             //conjunction
             instructions_conjunction_4,
-            main_conjunction_3,
+            //main_conjunction_3,
             after_block_4,
             //feature
             instructions_feature_3,
-            main_feature_2,
+          //  main_feature_2,
             after_block_5,
             //feature
             instructions_feature_4,
-            main_feature_3,
+            //main_feature_3,
             after_block_6,
             //post test and thanks
             post_test,
@@ -128,35 +128,35 @@ $("document").ready(function() {
           //practice trials
           //feature
           instructions_feature_1,
-          practice_feature,
+          //practice_feature,
           //conjunction
           instructions_conjunction_1,
-          practice_conjunction,
+          //practice_conjunction,
           //main trials
           main_instructions,
           //feature
           instructions_feature_2,
-          main_feature_1,
+        //  main_feature_1,
           after_block_1,
           //feature
           instructions_feature_3,
-          main_feature_2,
+          //main_feature_2,
           after_block_2,
           //conjunction
           instructions_conjunction_2,
-          main_conjunction_1,
+          //main_conjunction_1,
           after_block_3,
           //feature
           instructions_feature_4,
-          main_feature_3,
+          //main_feature_3,
           after_block_4,
           //conjunction
           instructions_conjunction_3,
-          main_conjunction_2,
+        //  main_conjunction_2,
           after_block_5,
           //conjunction
           instructions_conjunction_4,
-          main_conjunction_3,
+          //main_conjunction_3,
           after_block_6,
           //post test and thanks
           post_test,
