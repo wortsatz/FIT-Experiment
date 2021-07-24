@@ -61,10 +61,16 @@ check_response = function(data, next) {
 };
 
 // Declare your hooks here
-
+// Error feedback if participants exceeds the time for responding
+const get_ready = function(data,next){
+                        // show blank screen
+                        $(".magpie-view-stimulus").addClass("magpie-invisible");
+                        $('#feedback').text('Get ready!');
+                        next();
+                    }
 
 // compares the chosen answer to the value of `option1`
-get_ready = function(data, next){
-  alert('Get ready!');
-  next();
-};
+//get_ready = function(data, next){
+//  alert('Get ready!');
+//  next();
+//};
