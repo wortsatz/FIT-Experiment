@@ -36,10 +36,10 @@ $("document").ready(function() {
             intro,
             dominant_hand,
             instructions,
-            practice trials
+            //practice trials
             //conjunction
             instructions_conjunction_1,
-            //practice_conjunction,
+            practice_conjunction,
             //feature
             instructions_feature_1,
             //practice_feature,
@@ -125,10 +125,10 @@ $("document").ready(function() {
           intro,
           dominant_hand,
           instructions,
-          practice trials
+          //practice trials
           //feature
           instructions_feature_1,
-          //practice_feature,
+          practice_feature,
           //conjunction
           instructions_conjunction_1,
           //practice_conjunction,
