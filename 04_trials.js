@@ -24,8 +24,7 @@ const get_ready = function (data, next) {
   $(".magpie-view-stimulus").addClass("magpie-invisible");
   $('#feedback').text(`Get ready!`);
 
-  //setTimeout(magpie.findNextView, 1500);
-  next();
+  magpie.findNextView();
 };
 
 //practice: nur color bis jetzt hinzugefügt //vlt noch shape hinzufügen
