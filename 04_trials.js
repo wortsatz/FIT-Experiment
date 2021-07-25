@@ -20,12 +20,6 @@ const dominant_hand_info = {
 };
 
 
-const get_ready = function(data, next){
-  $(".magpie-view-stimulus").addClass("magpie-invisible");
-  $('#feedback').text('Get ready!');
-  next();
-};
-
 //practice: nur color bis jetzt hinzugefügt //vlt noch shape hinzufügen
 const practice_feature_trials_info = {
     key_press: [
