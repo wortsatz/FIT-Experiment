@@ -64,7 +64,7 @@ check_response = function(data, next) {
 // Error feedback if participants exceeds the time for responding
 
 get_ready = function(data,next){
-  window.timeout.push((function(){
+  window.push((function(){
         $('#reminder').text('Get ready!');
   }, 5000));
   next();
