@@ -63,12 +63,7 @@ check_response = function(data, next) {
 // Declare your hooks here
 // Error feedback if participants exceeds the time for responding
 
-get_ready = function(data,next){
-  window.push((function(){
-        $('#reminder').text('Get ready!');
-  }, 5000));
-  next();
-};
+
 // compares the chosen answer to the value of `option1`
 //get_ready = function(data, next){
 //  alert('Get ready!');
