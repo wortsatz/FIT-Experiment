@@ -20,17 +20,13 @@ const dominant_hand_info = {
 };
 
 
-const get_ready = function (data, next) {
-  if (typeof window.timeout === 'undefined') {
-    window.timeout = [];
-  }
-  // add the timeout to the timeoutarray
-  window.timeout.push(setTimeout(function () {
-    $(".magpie-view-stimulus").addClass("magpie-invisible");
-      $('#feedback').text(`Get ready`);
-  }, 2000));
+const get_ready = function(data, next) {
+  $(".magpie-view-stimulus").addClass("magpie-invisible");
+  $('#feedback').text('Get ready!');
+  setTimeout(magpie.findNextView, 1500);
   next();
 };
+  
 //practice: nur color bis jetzt hinzugefügt //vlt noch shape hinzufügen
 const practice_feature_trials_info = {
     key_press: [
