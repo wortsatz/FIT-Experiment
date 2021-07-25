@@ -20,13 +20,18 @@ const dominant_hand_info = {
 };
 
 
-const get_ready = function(data, next) {
-  $(".magpie-view-stimulus").addClass("magpie-invisible");
-  $('#feedback').text('Get ready!');
-  setTimeout(magpie.findNextView, 1500);
+const get_ready = function (data, next) {
+  if (typeof window.timeout === 'undefined') {
+    window.timeout = [];
+  }
+  // add the timeout to the timeoutarray
+  setTimeout(function () {
+    $(".magpie-view-stimulus").addClass("magpie-invisible");
+      $('#feedback').text(`Please answer more quickly! (Press 'q' or 'p' to continue)`);
+  });
   next();
 };
-  
+
 //practice: nur color bis jetzt hinzugefügt //vlt noch shape hinzufügen
 const practice_feature_trials_info = {
     key_press: [
