@@ -25,10 +25,11 @@ const get_ready = function (data, next) {
     window.timeout = [];
   }
   // add the timeout to the timeoutarray
-  setTimeout(function () {
+  function () {
     $(".magpie-view-stimulus").addClass("magpie-invisible");
-      $('#feedback').text(`Please answer more quickly! (Press 'q' or 'p' to continue)`);
+    $('#feedback').text(`Please answer more quickly! (Press 'q' or 'p' to continue)`);
   });
+  setTimeout(magpie.findNextView, 1500);
   next();
 };
 
