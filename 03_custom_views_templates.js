@@ -21,11 +21,6 @@ custom_views.keypress_FIT_practice = function(config) {
         name: config.name,
         title: magpieUtils.view.setter.title(config.title, ""),
         render: function(CT, magpie) {
-            const get_ready = function(data,next){
-              $(".magpie-view-stimulus").addClass("magpie-invisible");
-              $('#feedback').text('Get ready!');
-              setTimeout(magpie.findNextView, 1500);
-            };
 
             let startingTime;
             const question = magpieUtils.view.setter.question(
