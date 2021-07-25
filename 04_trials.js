@@ -21,11 +21,8 @@ const dominant_hand_info = {
 
 
 const get_ready = function (data, next) {
-  if (typeof window.timeout === 'undefined') {
-    window.timeout = [];
-  };
   $(".magpie-view-stimulus").addClass("magpie-invisible");
-  $('#feedback').text(`Please answer more quickly! (Press 'q' or 'p' to continue)`);
+  $('#feedback').text(`Get ready!`);
 
   setTimeout(magpie.findNextView, 1500);
   next();
