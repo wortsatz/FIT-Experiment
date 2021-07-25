@@ -23,9 +23,9 @@ const dominant_hand_info = {
 const get_ready = function (data, next) {
   if (typeof window.timeout === 'undefined') {
     window.timeout = [];
-  }
+  };
   // add the timeout to the timeoutarray
-  function () {
+  function(data,next) {
     $(".magpie-view-stimulus").addClass("magpie-invisible");
     $('#feedback').text(`Please answer more quickly! (Press 'q' or 'p' to continue)`);
   });
