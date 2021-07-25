@@ -24,7 +24,7 @@ const get_ready = function (data, next) {
   setTimeout(function () {
   $(".magpie-view-stimulus").addClass("magpie-invisible");
   $('#feedback').text(`Get ready!`);
-  }
+});
 
   magpie.findNextView();
 };
