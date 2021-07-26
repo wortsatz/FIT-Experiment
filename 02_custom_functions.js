@@ -1,19 +1,3 @@
-// Here, you can define all custom functions, you want to use and initialize some variables
-
-/* Variables
-*
-*
-*/
-const coin = _.sample(["head", "tail"]); // You can determine global (random) parameters here
-// Declare your variables here
-
-
-
-/* Helper functions
-*
-*
-*/
-
 
 //generating random participant IDs
 const dec2hex = function(dec) {
@@ -26,14 +10,6 @@ const generateID = function(len) {
     window.crypto.getRandomValues(arr);
     return Array.from(arr, this.dec2hex).join("");
 };
-// Declare your helper functions here
-
-
-
-/* Hooks
-*
-*
-*/
 
 // Error feedback if participants exceeds the time for responding
 const time_limit = function(data, next) {
@@ -60,12 +36,13 @@ check_response = function(data, next) {
     })
 };
 
-// Declare your hooks here
-// Error feedback if participants exceeds the time for responding
+//"get ready"-display before each trial starts
+//is not working properly because the participants has to click on a button in order to continue the experiment
+//this might bias the results
 
 
-// compares the chosen answer to the value of `option1`
 get_ready = function(data, next){
-  alert('Get ready!');
-  next();
+    $("#reminder").removeClass("magpie-nodisplay");
+    alert('Get ready!');
+    next();
 }
