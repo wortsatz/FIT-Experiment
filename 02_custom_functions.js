@@ -66,12 +66,8 @@ check_response = function(data, next) {
 
 // compares the chosen answer to the value of `option1`
 get_ready = function(data, next){
+  $('input[name=answer]').on('change', function(e) {
   alert('Get ready!');
-  if (view === "image_selection") {
-      $(".magpie-view-stimulus-container").addClass(
-          "magpie-nodisplay"
-      );
-      resolve();
-  }
   next();
 };
+}
