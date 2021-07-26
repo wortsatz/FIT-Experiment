@@ -69,5 +69,5 @@ get_ready = function(data, next){
   $('input[name=answer]').on('change', function(e) {
   alert('Get ready!');
   next();
-};
+});
 }
