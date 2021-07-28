@@ -41,8 +41,8 @@ check_response = function(data, next) {
 //this might bias the results
 
 
-get_ready = function(data, next){
-    $("#reminder").removeClass("magpie-nodisplay");
-    alert('Get ready!');
-    next();
-}
+//get_ready = function(data, next){
+    //$("#reminder").removeClass("magpie-nodisplay");
+    //alert('Get ready!');
+  //  next();
+//}
