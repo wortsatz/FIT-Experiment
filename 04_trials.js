@@ -38,7 +38,7 @@ const practice_feature_trials_info = {
               condition: "color",
           },
           {
-              picture: "images/practice/feature/5/target/F_5_T_3_Sbrown_TRAIN.jpg",
+              picture: "images/practice/feature/F_5_T_3_Sbrown_TRAIN.jpg",
               item: 3,
               expected: "target",
               number_of_item: 5,
