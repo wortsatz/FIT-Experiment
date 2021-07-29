@@ -149,125 +149,126 @@ custom_views.keypress_FIT_practice = function(config) {
 // Custom view template for main/experimental trials
 custom_views.keypress_FIT_main = function(config) {
     const keypress_FIT_main_function = {
-        name: config.name,
-        title: magpieUtils.view.setter.title(config.title, ""),
-        render: function(CT, magpie) {
-            let startingTime;
-            const question = magpieUtils.view.setter.question(
-                config.data[CT].question
-            );
-            const key1 = config.key1;
-            const key2 = config.key2;
-            const value1 = config[key1];
-            const value2 = config[key2];
-            const viewTemplate = `<div class="magpie-view">
-                    <h1 class='magpie-view-title'>${this.title}</h1>
-                    <p class='magpie-response-keypress-header'><strong>${key1}</strong> = ${value1}, <strong>${key2}</strong> = ${value2}</p>
-                    <p class='magpie-response-keypress-header' id='feedback'></p>
-                    <div class='magpie-view-stimulus-container'>
-                        <div class='magpie-view-stimulus magpie-nodisplay'></div>
-                    </div>
-                </div>`;
-            const answerContainerElem = `<div class='magpie-view-answer-container'>
-                        <p class='magpie-view-question'>${question}</p>
-                          </div>`;
+      name: config.name,
+      title: magpieUtils.view.setter.title(config.title, ""),
+      render: function(CT, magpie) {
 
-            $("#main").html(viewTemplate);
+          let startingTime;
+          const question = magpieUtils.view.setter.question(
+              config.data[CT].question
+          );
+          const key1 = config.key1;
+          const key2 = config.key2;
+          const value1 = config[key1];
+          const value2 = config[key2];
+          const viewTemplate = `<div class="magpie-view">
+                  <h1 class='magpie-view-title'>${this.title}</h1>
+                  <p class='magpie-response-keypress-header'><strong>${key1}</strong> = ${value1}, <strong>${key2}</strong> = ${value2}</p>
+                  <p class='magpie-response-keypress-header' id='feedback'></p>
+                  <div class='magpie-view-stimulus-container'>
+                      <div class='magpie-view-stimulus magpie-nodisplay'></div>
+                  </div>
+              </div>`;
+          const answerContainerElem = `<div class='magpie-view-answer-container'>
+                      <p class='magpie-view-question'>${question}</p>
+                        </div>`;
 
-            const handleKeyPress = function(e) {
-                const keyPressed = String.fromCharCode(
-                    e.which
-                ).toLowerCase();
+          $("#main").html(viewTemplate);
 
-                if (keyPressed === key1 || keyPressed === key2) {
-                    let correctness;
-                    const RT = Date.now() - startingTime; // measure RT before anything else
+          const handleKeyPress = function(e) {
+              const keyPressed = String.fromCharCode(
+                  e.which
+              ).toLowerCase();
 
-                    if (
-                        config.data[CT].expected ===
-                            config[keyPressed]
-                    ) {
-                        correctness = "correct";
-                        // show feedback
-                        $(".magpie-view-stimulus").addClass("magpie-invisible");
-                        $('#feedback').text('Correct! You reacted within ' + RT + ' ms.');
+              if (keyPressed === key1 || keyPressed === key2) {
+                  let correctness;
+                  const RT = Date.now() - startingTime; // measure RT before anything else
 
-                    } else {
-                        correctness = "incorrect";
-                        // show feedback
-                        $(".magpie-view-stimulus").addClass("magpie-invisible");
-                        $('#feedback').text('Incorrect! You reacted within ' + RT + ' ms.');
-                    }
+                  if (
+                      config.data[CT].expected ===
+                          config[keyPressed]
+                  ) {
+                      correctness = "correct";
+                      // show feedback
+                      $(".magpie-view-stimulus").addClass("magpie-invisible");
+                      $('#feedback').text('Correct! You reacted within ' + RT + ' ms.');
 
-                    const trial_data = {
-                        trial_type: config.trial_type,
-                        trial_number: CT + 1,
-                        key_pressed: keyPressed,
-                        correctness: correctness,
-                        RT: RT
-                    };
+                  } else {
+                      correctness = "incorrect";
+                      // show feedback
+                      $(".magpie-view-stimulus").addClass("magpie-invisible");
+                      $('#feedback').text('Incorrect! You reacted within ' + RT + ' ms.');
+                  }
 
-                    for (let prop in config.data[CT]) {
-                        if (config.data[CT].hasOwnProperty(prop)) {
-                            trial_data[prop] = config.data[CT][prop];
-                        }
-                    }
+                  const trial_data = {
+                      trial_type: config.trial_type,
+                      trial_number: CT + 1,
+                      key_pressed: keyPressed,
+                      correctness: correctness,
+                      RT: RT
+                  };
 
-                    trial_data[config.data[CT].key1] =
-                        config.data[CT][key1];
-                    trial_data[config.data[CT].key2] =
-                        config.data[CT][key2];
+                  for (let prop in config.data[CT]) {
+                      if (config.data[CT].hasOwnProperty(prop)) {
+                          trial_data[prop] = config.data[CT][prop];
+                      }
+                  }
 
-                    if (config.data[CT].picture !== undefined) {
-                        trial_data.picture = config.data[CT].picture;
-                    }
+                  trial_data[config.data[CT].key1] =
+                      config.data[CT][key1];
+                  trial_data[config.data[CT].key2] =
+                      config.data[CT][key2];
 
-                    if (config.data[CT].canvas !== undefined) {
-                        if (config.data[CT].canvas.canvasSettings !== undefined) {
-                            for (let prop in config.data[CT].canvas.canvasSettings) {
-                                if (config.data[CT].canvas.canvasSettings.hasOwnProperty(prop)) {
-                                    trial_data[prop] = config.data[CT].canvas.canvasSettings[prop];
-                                }
-                            }
-                            delete trial_data.canvas.canvasSettings;
-                        }
-                        for (let prop in config.data[CT].canvas) {
-                            if (config.data[CT].canvas.hasOwnProperty(prop)) {
-                                trial_data[prop] = config.data[CT].canvas[prop];
-                            }
-                        }
-                        delete trial_data.canvas;
-                    }
+                  if (config.data[CT].picture !== undefined) {
+                      trial_data.picture = config.data[CT].picture;
+                  }
 
-                    magpie.trial_data.push(trial_data);
-                    $("body").off("keydown", handleKeyPress);
-                    magpie.findNextView();
-                }
-            };
+                  if (config.data[CT].canvas !== undefined) {
+                      if (config.data[CT].canvas.canvasSettings !== undefined) {
+                          for (let prop in config.data[CT].canvas.canvasSettings) {
+                              if (config.data[CT].canvas.canvasSettings.hasOwnProperty(prop)) {
+                                  trial_data[prop] = config.data[CT].canvas.canvasSettings[prop];
+                              }
+                          }
+                          delete trial_data.canvas.canvasSettings;
+                      }
+                      for (let prop in config.data[CT].canvas) {
+                          if (config.data[CT].canvas.hasOwnProperty(prop)) {
+                              trial_data[prop] = config.data[CT].canvas[prop];
+                          }
+                      }
+                      delete trial_data.canvas;
+                  }
 
-            const enableResponse = function() {
-                $(".magpie-view").append(answerContainerElem);
-                $("body").on("keydown", handleKeyPress);
-            };
+                  magpie.trial_data.push(trial_data);
+                  $("body").off("keydown", handleKeyPress);
+                  setTimeout(magpie.findNextView, 1500); // delay to accomodate feedback
+              }
+          };
 
-            startingTime = Date.now();
+          const enableResponse = function() {
+              $(".magpie-view").append(answerContainerElem);
+              $("body").on("keydown", handleKeyPress);
+          };
 
-            // creates the DOM of the trial view
-            magpieUtils.view.createTrialDOM(
-                {
-                    pause: config.pause,
-                    fix_duration: config.fix_duration,
-                    stim_duration: config.stim_duration,
-                    data: config.data[CT],
-                    evts: config.hook,
-                    view: "keyPress"
-                },
-                enableResponse
-            );
-        },
-        CT: 0,
-        trials: config.trials
-    };
+          startingTime = Date.now();
 
-    return keypress_FIT_main_function;
+          // creates the DOM of the trial view
+          magpieUtils.view.createTrialDOM(
+              {
+                  pause: config.pause,
+                  fix_duration: config.fix_duration,
+                  stim_duration: config.stim_duration,
+                  data: config.data[CT],
+                  evts: config.hook,
+                  view: "keyPress"
+              },
+              enableResponse
+          );
+      },
+      CT: 0,
+      trials: config.trials
+  };
+
+  return keypress_FIT_practice_function;
 };
