@@ -270,5 +270,5 @@ custom_views.keypress_FIT_main = function(config) {
       trials: config.trials
   };
 
-  return keypress_FIT_practice_function;
+  return keypress_FIT_main_function;
 };
