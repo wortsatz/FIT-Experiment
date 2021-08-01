@@ -104,9 +104,11 @@ $("document").ready(function() {
         }
     });
 });
-}else{
+}
 
-$("document").ready(function() {
+else{
+
+  $("document").ready(function() {
     // prevent scrolling when space is pressed
     window.onkeydown = function(e) {
         if (e.keyCode === 32 && e.target === document.body) {
@@ -193,4 +195,5 @@ $("document").ready(function() {
         }
     });
 });
+
 }
