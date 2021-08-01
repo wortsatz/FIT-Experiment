@@ -51,7 +51,7 @@ custom_views.keypress_FIT_practice = function(config) {
 
                 if (keyPressed === key1 || keyPressed === key2) {
                     let correctness;
-                    const RT = Date.now() - startingTime; // measure RT before anything else
+                    const RT = Date.now() - startingTime - 1000; // measure RT before anything else
 
                     if (
                         config.data[CT].expected ===
@@ -182,7 +182,7 @@ custom_views.keypress_FIT_main = function(config) {
 
               if (keyPressed === key1 || keyPressed === key2) {
                   let correctness;
-                  const RT = Date.now() - startingTime; // measure RT before anything else
+                  const RT = Date.now() - startingTime - 1000; // measure RT before anything else
 
                   if (
                       config.data[CT].expected ===
@@ -242,7 +242,7 @@ custom_views.keypress_FIT_main = function(config) {
 
                   magpie.trial_data.push(trial_data);
                   $("body").off("keydown", handleKeyPress);
-                  setTimeout(magpie.findNextView, 1500); // delay to accomodate feedback
+                  magpie.findNextView; // delay to accomodate feedback
               }
           };
 
