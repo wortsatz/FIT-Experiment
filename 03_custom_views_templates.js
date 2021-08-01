@@ -242,7 +242,7 @@ custom_views.keypress_FIT_main = function(config) {
 
                   magpie.trial_data.push(trial_data);
                   $("body").off("keydown", handleKeyPress);
-                  magpie.findNextView; // delay to accomodate feedback
+                  setTimeout(magpie.findNextView, 1500); // delay to accomodate feedback
               }
           };
 
