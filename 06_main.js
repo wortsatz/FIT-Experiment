@@ -12,6 +12,10 @@
 
 const mapping = _.sample(["GroupA", "GroupB"]);
 
+// PRELOADING IMAGES
+const urls = getURLs();
+urls.forEach(preloadImages);
+
 //different view sequence depending on group assignment
 //GroupA:
 
@@ -34,7 +38,6 @@ $("document").ready(function() {
         views_seq: [
             //introduction
             intro,
-            dominant_hand,
             instructions,
             //practice trials
             //conjunction
@@ -76,13 +79,13 @@ $("document").ready(function() {
 
         // Here, you can specify all information for the deployment
         deploy: {
-            experimentID: "256",
+            experimentID: "272",
             serverAppURL: "https://magpie-demo.herokuapp.com/api/submit_experiment/",
             // Possible deployment methods are:
             // "debug" and "directLink"
             // As well as "MTurk", "MTurkSandbox" and "Prolific"
             deployMethod: "directLink",
-            contact_email: "franka.timm00@gmail.com",
+            contact_email: "aschlott@uos.de",
             prolificURL: "https://app.prolific.ac/submissions/complete?cc=SAMPLE1234"
         },
         // Here, you can specify how the progress bar should look like
@@ -104,11 +107,9 @@ $("document").ready(function() {
         }
     });
 });
-}
+}else{
 
-else{
-
-  $("document").ready(function() {
+    $("document").ready(function() {
     // prevent scrolling when space is pressed
     window.onkeydown = function(e) {
         if (e.keyCode === 32 && e.target === document.body) {
@@ -125,7 +126,6 @@ else{
         views_seq: [
           //introduction
           intro,
-          dominant_hand,
           instructions,
           //practice trials
           //feature
@@ -167,13 +167,13 @@ else{
 
         // Here, you can specify all information for the deployment
         deploy: {
-            experimentID: "256",
+            experimentID: "272",
             serverAppURL: "https://magpie-demo.herokuapp.com/api/submit_experiment/",
             // Possible deployment methods are:
             // "debug" and "directLink"
             // As well as "MTurk", "MTurkSandbox" and "Prolific"
             deployMethod: "directLink",
-            contact_email: "franka.timm00@gmail.com",
+            contact_email: "aschlott@uos.de",
             prolificURL: "https://app.prolific.ac/submissions/complete?cc=SAMPLE1234"
         },
         // Here, you can specify how the progress bar should look like
@@ -195,5 +195,4 @@ else{
         }
     });
 });
-
 }

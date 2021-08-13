@@ -51,7 +51,7 @@ custom_views.keypress_FIT_practice = function(config) {
 
                 if (keyPressed === key1 || keyPressed === key2) {
                     let correctness;
-                    const RT = Date.now() - startingTime - 1000; // measure RT before anything else
+                    const RT = Date.now() - startingTime - 1000; // measure RT before anything else (subtract fixation cross displaytime)
 
                     if (
                         config.data[CT].expected ===
@@ -83,10 +83,8 @@ custom_views.keypress_FIT_practice = function(config) {
                         }
                     }
 
-                    trial_data[config.data[CT].key1] =
-                        config.data[CT][key1];
-                    trial_data[config.data[CT].key2] =
-                        config.data[CT][key2];
+                    //trial_data[config.data[CT].key1] = config.data[CT][key1];
+                    //trial_data[config.data[CT].key2] = config.data[CT][key2];
 
                     if (config.data[CT].picture !== undefined) {
                         trial_data.picture = config.data[CT].picture;
@@ -142,10 +140,6 @@ custom_views.keypress_FIT_practice = function(config) {
     return keypress_FIT_practice_function;
 };
 
-
-
-
-
 // Custom view template for main/experimental trials
 custom_views.keypress_FIT_main = function(config) {
     const keypress_FIT_main_function = {
@@ -182,7 +176,7 @@ custom_views.keypress_FIT_main = function(config) {
 
               if (keyPressed === key1 || keyPressed === key2) {
                   let correctness;
-                  const RT = Date.now() - startingTime - 1000; // measure RT before anything else
+                  const RT = Date.now() - startingTime - 1000; // measure RT before anything else (subtract fixation cross display time)
 
                   if (
                       config.data[CT].expected ===
@@ -214,10 +208,8 @@ custom_views.keypress_FIT_main = function(config) {
                       }
                   }
 
-                  trial_data[config.data[CT].key1] =
-                      config.data[CT][key1];
-                  trial_data[config.data[CT].key2] =
-                      config.data[CT][key2];
+                  //trial_data[config.data[CT].key1] = config.data[CT][key1];
+                  //trial_data[config.data[CT].key2] = config.data[CT][key2];
 
                   if (config.data[CT].picture !== undefined) {
                       trial_data.picture = config.data[CT].picture;

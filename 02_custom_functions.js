@@ -36,13 +36,21 @@ check_response = function(data, next) {
     })
 };
 
-//"get ready"-display before each trial starts
-//is not working properly because the participants has to click on a button in order to continue the experiment
-//this might bias the results
+// extract URLs of all used images and concatonate them into one array
+function getURLs() {
+  const prac_feat_urls = practice_feature_trials_info.key_press.map(function(trial) { return trial.picture })
+  const prac_conj_urls = practice_conjunction_trials_info.key_press.map(function(trial) { return trial.picture })
+  const main_feat_urls = main_feature_trials_info.key_press.map(function(trial) { return trial.picture })
+  const main_conj_urls = main_conjunction_trials_info.key_press.map(function(trial) { return trial.picture })
 
+  const urls = [].concat(prac_feat_urls, prac_conj_urls, main_feat_urls, main_conj_urls)
 
-//get_ready = function(data, next){
-    //$("#reminder").removeClass("magpie-nodisplay");
-    //alert('Get ready!');
-  //  next();
-//}
+  return urls
+}
+
+// use the urls generated above to preload the images.
+// This function is called from main and applied to every element of the array
+function preloadImages(url) {
+    var img=new Image();
+    img.src=url;
+}
