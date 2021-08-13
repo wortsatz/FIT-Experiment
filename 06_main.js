@@ -79,13 +79,13 @@ $("document").ready(function() {
 
         // Here, you can specify all information for the deployment
         deploy: {
-            experimentID: "272",
+            experimentID: "256",
             serverAppURL: "https://magpie-demo.herokuapp.com/api/submit_experiment/",
             // Possible deployment methods are:
             // "debug" and "directLink"
             // As well as "MTurk", "MTurkSandbox" and "Prolific"
             deployMethod: "directLink",
-            contact_email: "aschlott@uos.de",
+            contact_email: "franka.timm00@gmail.com",
             prolificURL: "https://app.prolific.ac/submissions/complete?cc=SAMPLE1234"
         },
         // Here, you can specify how the progress bar should look like
@@ -167,13 +167,13 @@ $("document").ready(function() {
 
         // Here, you can specify all information for the deployment
         deploy: {
-            experimentID: "272",
+            experimentID: "256",
             serverAppURL: "https://magpie-demo.herokuapp.com/api/submit_experiment/",
             // Possible deployment methods are:
             // "debug" and "directLink"
             // As well as "MTurk", "MTurkSandbox" and "Prolific"
             deployMethod: "directLink",
-            contact_email: "aschlott@uos.de",
+            contact_email: "franka.timm00@gmail.com",
             prolificURL: "https://app.prolific.ac/submissions/complete?cc=SAMPLE1234"
         },
         // Here, you can specify how the progress bar should look like
